@@ -1,0 +1,2485 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conecta Preá | Imóveis, investimento e gestão na Praia do Preá</title>
+<meta name="description" content="Imóveis, administração completa, concierge, espaços para eventos e uma rede de contatos para investir e fazer negócios na Praia do Preá, Ceará.">
+<meta name="theme-color" content="#1b1815">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* =========================================================
+   CORES E FONTES — altere aqui para mudar o visual do site
+   ========================================================= */
+:root{
+  --ink:#1b1815;        /* fundo escuro */
+  --ink2:#262220;       /* fundo escuro (cartões) */
+  --sand:#f6f0e8;       /* fundo claro principal */
+  --sand2:#ede4d6;      /* fundo claro alternativo */
+  --paper:#fffdfa;      /* cartões */
+  --orange:#c8662d;     /* cor da marca */
+  --orange2:#e8864a;    /* cor da marca (hover/realce) */
+  --sea:#1f6b73;        /* cor de apoio (dados/investimento) */
+  --danger:#c0392b;     /* ações destrutivas */
+  --muted:#6d655c;
+  --line:#e3d9c9;
+  --radius:14px;
+  --shadow:0 14px 40px -20px rgba(27,24,21,.45);
+  --font-display:'Fraunces',Georgia,serif;
+  --font-body:'Inter',system-ui,-apple-system,Segoe UI,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:110px}
+body{font-family:var(--font-body);background:var(--sand);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+body.modal-open{overflow:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+input,select,textarea{font:inherit;color:inherit}
+svg.i{width:1em;height:1em;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none;vertical-align:-.125em}
+.wrap{width:min(1240px,100% - 40px);margin-inline:auto}
+section{padding:84px 0}
+.eyebrow{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--orange)}
+h1,h2,h3{font-family:var(--font-display);font-weight:600;line-height:1.08;letter-spacing:-.01em}
+h2.title{font-size:clamp(2rem,4vw,3rem);margin-top:10px}
+h2.title em,h1 em{font-style:italic;color:var(--orange)}
+.lead{color:var(--muted);max-width:60ch;margin-top:14px;font-size:1.04rem}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:34px}
+.alt{background:var(--sand2)}
+.dark{background:var(--ink);color:#f2ebe0}
+.dark .lead{color:#b9b0a4}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 22px;border-radius:999px;font-weight:600;font-size:.92rem;transition:.2s;border:1.5px solid transparent;white-space:nowrap}
+.btn-primary{background:var(--orange);color:#fff}
+.btn-primary:hover{background:var(--orange2);transform:translateY(-1px)}
+.btn-wa{background:#1fa855;color:#fff}
+.btn-wa:hover{background:#25bd62;transform:translateY(-1px)}
+.btn-danger{background:var(--danger);color:#fff}
+.btn-danger:hover{background:#d94536}
+.btn-ghost{border-color:currentColor;opacity:.92}
+.btn-ghost:hover{background:rgba(127,127,127,.12)}
+.btn-sm{padding:9px 16px;font-size:.82rem}
+.btn-xs{padding:6px 11px;font-size:.76rem}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border-radius:999px;border:1.5px solid var(--line);background:var(--paper);font-size:.86rem;font-weight:500;transition:.18s}
+.chip:hover{border-color:var(--orange);color:var(--orange)}
+.chip[aria-pressed="true"],.chip.on{background:var(--orange);border-color:var(--orange);color:#fff}
+.flash{animation:flash 1.6s ease}
+@keyframes flash{0%,100%{box-shadow:0 0 0 0 rgba(200,102,45,0)}25%{box-shadow:0 0 0 6px rgba(200,102,45,.35)}}
+
+/* ---------- Header ---------- */
+header.top{position:sticky;top:0;z-index:60;background:rgba(27,24,21,.96);backdrop-filter:blur(8px);color:#f2ebe0;border-bottom:1px solid rgba(255,255,255,.08)}
+.top .wrap{display:flex;align-items:center;gap:16px;height:70px}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand img{height:44px;width:auto}
+.brand img.inv{filter:brightness(0) invert(1)}
+.brand .wm{font-family:var(--font-display);font-size:1.35rem;font-weight:600;letter-spacing:-.01em}
+.brand .wm b{color:var(--orange2);font-weight:600}
+nav.main{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;flex:1;justify-content:center}
+nav.main::-webkit-scrollbar{display:none}
+nav.main a{padding:9px 13px;font-size:.84rem;font-weight:500;color:#cfc6b9;border-radius:999px;white-space:nowrap;transition:.15s}
+nav.main a:hover{color:#fff;background:rgba(255,255,255,.08)}
+.top-acts{display:flex;align-items:center;gap:8px;flex:none}
+.admin-trigger{width:38px;height:38px;border-radius:999px;border:1px solid rgba(255,255,255,.16);color:#cfc6b9;display:grid;place-items:center;transition:.18s}
+.admin-trigger:hover{color:#fff;border-color:var(--orange2);background:rgba(232,134,74,.14)}
+
+/* ---------- Ticker ---------- */
+.ticker{background:var(--orange);color:#fff;overflow:hidden;font-size:.8rem;font-weight:500}
+.ticker .track{display:flex;width:max-content;animation:tick 55s linear infinite}
+.ticker:hover .track{animation-play-state:paused}
+.ticker span{padding:9px 28px;white-space:nowrap}
+.ticker span::before{content:"◆";margin-right:12px;opacity:.6;font-size:.6rem}
+@keyframes tick{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.ticker .track{animation:none}html{scroll-behavior:auto}}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;color:#f6efe4;padding:70px 0 90px;isolation:isolate;background:var(--ink)}
+.hero .bg{position:absolute;inset:0;z-index:-2;background:linear-gradient(135deg,#2a2018,#1f4a50 70%,#c8662d 160%)}
+.hero .bg img{width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(95deg,rgba(20,17,14,.92) 8%,rgba(20,17,14,.72) 50%,rgba(20,17,14,.5))}
+.hero .grid{display:grid;grid-template-columns:1.02fr .98fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(2.4rem,5.2vw,4.3rem);margin:18px 0 20px}
+.hero .sub{font-size:1.1rem;color:#d9cfc1;max-width:50ch}
+.hero .quick{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.hero .quick .btn-ghost{color:#f6efe4}
+.hero .trust{display:flex;gap:26px;flex-wrap:wrap;margin-top:34px;padding-top:22px;border-top:1px solid rgba(255,255,255,.16);font-size:.82rem;color:#c8bfb2}
+.hero .trust b{display:block;font-family:var(--font-display);font-size:1.5rem;color:#fff;font-weight:600}
+
+/* Seletor de intenção */
+.chooser{background:var(--paper);color:var(--ink);border-radius:20px;padding:26px;box-shadow:0 30px 80px -30px rgba(0,0,0,.7)}
+.chooser h2{font-size:1.65rem;margin:6px 0 16px}
+.grp{margin-bottom:14px}
+.grp-t{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.panel{margin-top:6px;padding:20px;border-radius:14px;background:var(--sand);border:1px solid var(--line);animation:fade .25s ease}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}}
+.panel h3{font-size:1.3rem;margin-bottom:8px}
+.panel p{color:var(--muted);font-size:.93rem}
+.panel ul{list-style:none;margin:12px 0 16px;display:grid;gap:6px}
+.panel li{display:flex;gap:9px;font-size:.9rem;align-items:flex-start}
+.panel li .i{color:var(--orange);margin-top:3px}
+.panel .acts{display:flex;gap:10px;flex-wrap:wrap}
+
+/* ---------- Proof ---------- */
+.proof{padding:0;margin-top:-1px;background:var(--ink2);color:#efe7da}
+.proof .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.proof .it{padding:24px 22px;border-right:1px solid rgba(255,255,255,.09)}
+.proof .it:last-child{border:0}
+.proof b{font-family:var(--font-display);font-size:1.9rem;font-weight:600;color:var(--orange2);display:block;line-height:1.1}
+.proof span{font-size:.8rem;color:#b9b0a4}
+
+/* ---------- Imóveis ---------- */
+.filters{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:26px}
+.filters select{padding:10px 14px;border-radius:999px;border:1.5px solid var(--line);background:var(--paper);font-size:.86rem;font-weight:500}
+.filters .sp{flex:1}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.pcard{background:var(--paper);border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column;transition:.2s}
+.pcard:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.ph{position:relative;background:linear-gradient(135deg,#3a2c20,#1f4a50);display:grid;place-items:center;color:rgba(255,255,255,.28);font-size:2.4rem;overflow:hidden}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pcard .ph{aspect-ratio:4/3}
+.pcard .tags{position:absolute;top:12px;left:12px;display:flex;gap:6px;z-index:2}
+.tag{background:rgba(27,24,21,.82);color:#fff;font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 10px;border-radius:999px}
+.tag.star{background:var(--orange)}
+.pcard .price{position:absolute;left:0;right:0;bottom:0;padding:34px 16px 12px;background:linear-gradient(transparent,rgba(0,0,0,.78));color:#fff;z-index:2}
+.pcard .price strong{font-family:var(--font-display);font-size:1.45rem;font-weight:600;display:block;line-height:1.1}
+.pcard .price small{font-size:.74rem;opacity:.85}
+.pcard .body{padding:16px 18px 18px;display:flex;flex-direction:column;flex:1}
+.pcard .place{font-size:.76rem;color:var(--orange);font-weight:600;text-transform:uppercase;letter-spacing:.08em}
+.pcard h3{font-size:1.08rem;margin:6px 0 12px;font-family:var(--font-body);font-weight:600;line-height:1.3}
+.specs{display:flex;gap:14px;flex-wrap:wrap;font-size:.82rem;color:var(--muted);margin-bottom:14px}
+.specs span{display:inline-flex;gap:6px;align-items:center}
+.pcard .foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:8px;padding-top:14px;border-top:1px solid var(--line)}
+.pcard .ref{font-size:.74rem;color:var(--muted)}
+.empty{grid-column:1/-1;text-align:center;padding:50px 20px;color:var(--muted)}
+.more{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:28px;padding:20px 24px;border-radius:var(--radius);background:var(--ink);color:#efe7da}
+
+/* ---------- Gestão ---------- */
+.mgmt-top{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start}
+.models{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:26px}
+.model{padding:16px 18px;border:1px solid rgba(255,255,255,.14);border-radius:12px;font-size:.9rem;display:flex;gap:10px;align-items:flex-start}
+.model .i{color:var(--orange2);margin-top:3px}
+.formcard{background:var(--paper);color:var(--ink);border-radius:18px;padding:26px}
+.formcard h3{font-size:1.4rem;margin-bottom:4px}
+.formcard p.s{color:var(--muted);font-size:.88rem;margin-bottom:16px}
+.field{display:grid;gap:5px;margin-bottom:12px}
+.field label{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.field input,.field select,.field textarea{padding:11px 14px;border-radius:10px;border:1.5px solid var(--line);background:var(--sand);width:100%}
+.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--orange);border-color:transparent}
+.field .hint{font-size:.75rem;color:var(--muted)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+.svc .c{padding:24px;border-radius:var(--radius);background:var(--ink2);border:1px solid rgba(255,255,255,.08)}
+.svc .c .ic{width:44px;height:44px;border-radius:12px;background:rgba(200,102,45,.18);color:var(--orange2);display:grid;place-items:center;font-size:1.2rem;margin-bottom:14px}
+.svc h3{font-size:1.15rem;margin-bottom:6px;font-family:var(--font-body);font-weight:600}
+.svc p{font-size:.88rem;color:#b9b0a4}
+.fine{font-size:.78rem;color:var(--muted);margin-top:16px}
+.dark .fine{color:#948b80}
+
+/* ---------- Hub / soluções ---------- */
+.hub{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.hcard{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:.2s}
+.hcard:hover{box-shadow:var(--shadow)}
+.hcard .ph{aspect-ratio:16/8;font-size:2rem}
+.hcard .b{padding:22px;display:flex;flex-direction:column;flex:1}
+.hcard .k{display:flex;align-items:center;gap:9px;color:var(--orange);font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.hcard h3{font-size:1.4rem;margin:10px 0 8px}
+.hcard p{color:var(--muted);font-size:.92rem}
+.hcard details{margin:16px 0;border-top:1px solid var(--line)}
+.hcard summary{cursor:pointer;list-style:none;padding:12px 0;font-weight:600;font-size:.86rem;display:flex;justify-content:space-between}
+.hcard summary::after{content:"+";font-size:1.1rem;color:var(--orange)}
+.hcard details[open] summary::after{content:"–"}
+.hcard details h4{font-size:.8rem;margin:10px 0 4px}
+.hcard details ul{margin-left:18px;font-size:.85rem;color:var(--muted)}
+.hcard details p{font-size:.85rem}
+.hcard .go{margin-top:auto}
+
+/* ---------- Radar (mercado + notícias) ---------- */
+.radar{display:grid;grid-template-columns:1.25fr .75fr;gap:30px;align-items:start}
+.news-feat{position:relative;border-radius:var(--radius);overflow:hidden;min-height:340px;display:flex;align-items:flex-end;color:#fff;background:linear-gradient(135deg,#2a2018,#1f4a50);margin-bottom:18px}
+.news-feat .ph{position:absolute;inset:0}
+.news-feat::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 25%,rgba(0,0,0,.85))}
+.news-feat .t{position:relative;z-index:2;padding:26px}
+.news-feat h3{font-size:clamp(1.5rem,2.6vw,2.1rem);margin:8px 0 10px}
+.news-feat .meta{font-size:.78rem;opacity:.85}
+.news-list{display:grid;gap:14px}
+.nitem{display:grid;grid-template-columns:130px 1fr auto;gap:16px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:12px;transition:.2s}
+a.nitem:hover{border-color:var(--orange);transform:translateX(3px)}
+.nitem .ph{height:84px;border-radius:10px;font-size:1.4rem}
+.nitem .k{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--orange)}
+.nitem h3{font-family:var(--font-body);font-size:.98rem;font-weight:600;line-height:1.3;margin:3px 0}
+.nitem .m{font-size:.76rem;color:var(--muted)}
+.nitem .ar{color:var(--orange);padding-right:6px}
+.mkt{background:var(--ink);color:#efe7da;border-radius:18px;padding:26px;position:sticky;top:96px}
+.mkt h3{font-size:1.35rem;margin:6px 0 4px}
+.mkt .stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}
+.mkt .stat{padding:14px;border-radius:12px;background:var(--ink2)}
+.mkt .stat b{font-family:var(--font-display);font-size:1.6rem;color:var(--orange2);display:block;line-height:1.1}
+.mkt .stat span{font-size:.74rem;color:#b9b0a4}
+.bars{display:grid;gap:10px;margin:10px 0 6px}
+.bar .l{display:flex;justify-content:space-between;font-size:.78rem;margin-bottom:4px;color:#d8cfc2}
+.bar .t{height:9px;border-radius:99px;background:rgba(255,255,255,.1);overflow:hidden}
+.bar .f{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--orange),var(--orange2))}
+.mkt .note{font-size:.72rem;color:#948b80;margin-top:12px}
+.tabs{display:flex;gap:6px;margin:20px 0 12px;background:var(--ink2);padding:4px;border-radius:999px}
+.tabs button{flex:1;padding:9px 10px;border-radius:999px;font-size:.8rem;font-weight:600;color:#b9b0a4}
+.tabs button.on{background:var(--orange);color:#fff}
+.calc .field label{color:#948b80}
+.calc .field input,.calc .field select{background:var(--ink2);border-color:rgba(255,255,255,.12);color:#fff}
+.calc .res{margin-top:6px;padding:14px;border-radius:12px;background:rgba(31,107,115,.35);border:1px solid rgba(255,255,255,.1)}
+.calc .res div{display:flex;justify-content:space-between;font-size:.84rem;padding:3px 0}
+.calc .res .big{font-family:var(--font-display);font-size:1.5rem;color:#fff;border-top:1px solid rgba(255,255,255,.15);margin-top:6px;padding-top:8px}
+
+/* ---------- Conexões ---------- */
+.cx-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.cx{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.cxc{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:18px;display:flex;flex-direction:column;gap:6px}
+.cxc h3{font-family:var(--font-body);font-size:.98rem;font-weight:600;line-height:1.25}
+.cxc p{font-size:.82rem;color:var(--muted);flex:1}
+.cxc a{margin-top:8px;font-size:.84rem;font-weight:600;color:var(--orange);display:inline-flex;gap:7px;align-items:center}
+.cxc a:hover{color:var(--orange2)}
+
+/* ---------- Blog ---------- */
+.blog-bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:24px}
+.blog-bar .sp{flex:1}
+.blog-search{padding:10px 16px;border-radius:999px;border:1.5px solid var(--line);background:var(--paper);font-size:.86rem;min-width:220px}
+.blog-search:focus{outline:2px solid var(--orange);border-color:transparent}
+.posts{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.post{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:.2s;text-align:left;cursor:pointer}
+.post:hover{box-shadow:var(--shadow);transform:translateY(-3px);border-color:var(--orange2)}
+.post .ph{aspect-ratio:16/9}
+.post .b{padding:20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.post .k{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.post .ex{font-size:.7rem;background:var(--sand2);color:var(--muted);padding:2px 8px;border-radius:999px;letter-spacing:.04em}
+.post h3{font-size:1.25rem}
+.post p{font-size:.88rem;color:var(--muted);flex:1}
+.post .meta-row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:10px;padding-top:12px;border-top:1px solid var(--line);font-size:.78rem;color:var(--muted)}
+.post .read-more{color:var(--orange);font-weight:600;display:inline-flex;align-items:center;gap:5px}
+
+/* ---------- Modal Leitor de Matéria (Blog) ---------- */
+.modal-backdrop{position:fixed;inset:0;z-index:100;background:rgba(18,15,13,.76);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:20px;overflow-y:auto}
+.modal-backdrop.open{display:flex}
+.article-modal{background:var(--paper);color:var(--ink);width:min(820px,100%);max-height:90vh;border-radius:20px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 30px 90px -20px rgba(0,0,0,.65);animation:fade .22s ease}
+.article-head{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;border-bottom:1px solid var(--line);background:var(--sand)}
+.article-head .cat-pill{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--orange)}
+.icon-close{width:36px;height:36px;border-radius:999px;display:grid;place-items:center;border:1px solid var(--line);background:var(--paper);color:var(--ink);transition:.15s}
+.icon-close:hover{background:var(--orange);border-color:var(--orange);color:#fff}
+.article-scroll{overflow-y:auto;padding:0 0 28px}
+.article-cover{width:100%;max-height:360px;overflow:hidden;background:linear-gradient(135deg,#3a2c20,#1f4a50)}
+.article-cover img{width:100%;height:100%;max-height:360px;object-fit:cover}
+.article-inner{padding:28px 32px 12px}
+.article-inner h1{font-size:clamp(1.7rem,3.4vw,2.5rem);margin-bottom:14px}
+.article-meta{display:flex;flex-wrap:wrap;gap:14px;font-size:.82rem;color:var(--muted);margin-bottom:20px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.article-lead{font-size:1.08rem;color:var(--ink);font-weight:500;margin-bottom:22px;padding-left:16px;border-left:3px solid var(--orange)}
+.article-body{font-size:1rem;line-height:1.75;color:#2f2a25;display:grid;gap:14px}
+.article-body h2{font-size:1.4rem;margin-top:10px;color:var(--ink)}
+.article-body ul{margin-left:20px;display:grid;gap:6px}
+.article-body blockquote{background:var(--sand);border-left:3px solid var(--sea);padding:14px 18px;border-radius:0 12px 12px 0;font-style:italic;color:var(--muted)}
+.article-foot{margin-top:28px;padding:20px;border-radius:14px;background:var(--sand);border:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+
+/* ---------- Painel Admin (CMS Completo) ---------- */
+.admin-overlay{position:fixed;inset:0;z-index:110;background:rgba(15,13,11,.82);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:16px}
+.admin-overlay.open{display:flex}
+.admin-shell{background:var(--sand);color:var(--ink);width:min(1320px,100%);height:min(92vh,880px);border-radius:20px;overflow:hidden;display:grid;grid-template-columns:250px 1fr;box-shadow:0 30px 100px -20px rgba(0,0,0,.75);border:1px solid rgba(255,255,255,.12)}
+.admin-side{background:var(--ink);color:#efe7da;display:flex;flex-direction:column;overflow-y:auto}
+.admin-brand{padding:20px 18px;border-bottom:1px solid rgba(255,255,255,.08)}
+.admin-brand strong{font-family:var(--font-display);font-size:1.2rem;display:block}
+.admin-brand small{font-size:.74rem;color:#a59c90}
+.admin-nav{padding:12px 10px;display:grid;gap:4px;flex:1}
+.admin-nav button{display:flex;align-items:center;gap:10px;padding:11px 13px;border-radius:10px;font-size:.86rem;font-weight:500;color:#cfc6b9;text-align:left;transition:.15s}
+.admin-nav button:hover{background:rgba(255,255,255,.07);color:#fff}
+.admin-nav button.on{background:var(--orange);color:#fff}
+.admin-nav .badge-cnt{margin-left:auto;font-size:.72rem;background:rgba(255,255,255,.14);padding:2px 7px;border-radius:999px}
+.admin-side-foot{padding:14px 12px;border-top:1px solid rgba(255,255,255,.08);display:grid;gap:8px}
+.admin-main{display:flex;flex-direction:column;min-width:0;overflow:hidden;background:var(--sand)}
+.admin-top{background:var(--paper);border-bottom:1px solid var(--line);padding:14px 22px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.admin-top h2{font-size:1.35rem}
+.admin-top-acts{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.admin-body{padding:22px;overflow-y:auto;flex:1}
+.admin-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:20px;align-items:start}
+.admin-card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px}
+.admin-card h3{font-size:1.12rem;margin-bottom:12px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.admin-list{display:grid;gap:10px;max-height:62vh;overflow-y:auto;padding-right:4px}
+.admin-item{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;border:1.5px solid var(--line);background:var(--sand);transition:.15s}
+.admin-item.active{border-color:var(--orange);background:#fff5ee}
+.admin-thumb{width:54px;height:54px;border-radius:9px;background:linear-gradient(135deg,#3a2c20,#1f4a50);overflow:hidden;flex:none;display:grid;place-items:center;color:rgba(255,255,255,.5)}
+.admin-thumb img{width:100%;height:100%;object-fit:cover}
+.admin-item-info{min-width:0;flex:1}
+.admin-item-info strong{display:block;font-size:.9rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.admin-item-info span{display:block;font-size:.76rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.admin-item-acts{display:flex;gap:4px;flex:none}
+.mini-btn{width:30px;height:30px;border-radius:8px;border:1px solid var(--line);background:var(--paper);color:var(--ink);display:grid;place-items:center;font-size:.82rem;transition:.15s}
+.mini-btn:hover{border-color:var(--orange);color:var(--orange)}
+.mini-btn.del:hover{border-color:var(--danger);background:var(--danger);color:#fff}
+
+/* Upload de imagem no Admin */
+.img-picker{border:1.5px dashed var(--line);border-radius:12px;padding:12px;background:var(--sand);display:grid;gap:10px}
+.img-preview-row{display:flex;gap:12px;align-items:center}
+.img-preview-box{width:84px;height:60px;border-radius:9px;overflow:hidden;background:linear-gradient(135deg,#3a2c20,#1f4a50);flex:none;display:grid;place-items:center;color:rgba(255,255,255,.45)}
+.img-preview-box img{width:100%;height:100%;object-fit:cover}
+.img-picker-btns{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.file-label{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:999px;background:var(--ink);color:#fff;font-size:.78rem;font-weight:600;cursor:pointer}
+.file-label:hover{background:var(--orange)}
+.file-label input{display:none}
+.chk-line{display:flex;align-items:center;gap:8px;font-size:.86rem;font-weight:500;cursor:pointer;padding:6px 0}
+.chk-line input{width:17px;height:17px;accent-color:var(--orange)}
+
+/* Login / Confirmação */
+.small-modal{background:var(--paper);color:var(--ink);width:min(420px,100%);border-radius:18px;padding:26px;box-shadow:0 30px 90px -20px rgba(0,0,0,.65);animation:fade .2s ease}
+.small-modal h3{font-size:1.4rem;margin-bottom:6px}
+.small-modal p{font-size:.9rem;color:var(--muted);margin-bottom:16px}
+.small-modal .acts{display:flex;justify-content:flex-end;gap:10px;margin-top:16px}
+
+/* Toast */
+.toast-wrap{position:fixed;left:20px;bottom:20px;z-index:200;display:grid;gap:8px;pointer-events:none}
+.toast{background:var(--ink);color:#fff;padding:12px 18px;border-radius:12px;font-size:.86rem;font-weight:500;box-shadow:0 12px 30px -10px rgba(0,0,0,.5);display:flex;align-items:center;gap:10px;border-left:4px solid var(--orange2);animation:fade .2s ease;pointer-events:auto}
+.toast.ok{border-left-color:#25bd62}
+.toast.err{border-left-color:#e74c3c}
+
+/* ---------- Contato ---------- */
+.contact{position:relative;overflow:hidden}
+.contact .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center}
+.contact h2{font-size:clamp(2.2rem,4.8vw,3.8rem)}
+.contact h2 em{font-style:italic;color:var(--orange2)}
+.clist{display:grid;gap:16px;font-size:1rem}
+.clist a,.clist p{display:flex;gap:14px;align-items:center}
+.clist .i{color:var(--orange2);font-size:1.2rem}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+footer{background:#120f0d;color:#948b80;font-size:.8rem;padding:26px 0}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+footer a,footer button.flink{color:#b9b0a4;text-decoration:underline;margin-left:16px;font-size:.8rem}
+footer button.flink:hover{color:#fff}
+.fab{position:fixed;right:18px;bottom:18px;z-index:70;width:58px;height:58px;border-radius:50%;background:#1fa855;color:#fff;display:grid;place-items:center;font-size:1.6rem;box-shadow:0 10px 30px -8px rgba(0,0,0,.5);transition:.2s}
+.fab:hover{transform:scale(1.08)}
+
+/* ---------- Responsivo ---------- */
+@media (max-width:1080px){
+  .hero .grid,.mgmt-top,.radar,.contact .grid{grid-template-columns:1fr}
+  .mkt{position:static}
+  .cards,.hub,.posts,.svc{grid-template-columns:repeat(2,1fr)}
+  .cx{grid-template-columns:repeat(2,1fr)}
+  .proof .wrap{grid-template-columns:repeat(2,1fr)}
+  .proof .it:nth-child(2){border-right:0}
+  .proof .it{border-bottom:1px solid rgba(255,255,255,.09)}
+  .admin-shell{grid-template-columns:1fr;height:94vh}
+  .admin-side{flex-direction:row;align-items:center;overflow-x:auto;overflow-y:hidden;padding:0 10px}
+  .admin-brand,.admin-side-foot{display:none}
+  .admin-nav{display:flex;padding:8px 0;gap:6px;width:max-content}
+  .admin-grid{grid-template-columns:1fr}
+}
+@media (max-width:720px){
+  section{padding:58px 0}
+  .top .wrap{gap:10px;height:62px}
+  .top .btn span{display:none}
+  .cards,.hub,.posts,.svc,.cx,.models,.row2,.row3{grid-template-columns:1fr}
+  .nitem{grid-template-columns:96px 1fr}
+  .nitem .ar{display:none}
+  .hero{padding:44px 0 56px}
+  .chooser{padding:18px}
+  .brand img{height:36px}
+  .article-inner{padding:20px 18px 8px}
+  .admin-overlay{padding:6px}
+  .admin-body{padding:14px}
+}
+</style>
+</head>
+<body>
+
+<!-- ======================= CABEÇALHO ======================= -->
+<header class="top">
+  <div class="wrap">
+    <a class="brand" id="brand" href="#topo" aria-label="Conecta Preá — início"></a>
+    <nav class="main" aria-label="Seções do site">
+      <a href="#imoveis">Imóveis</a>
+      <a href="#gestao">Gestão &amp; Concierge</a>
+      <a href="#solucoes">Espaços &amp; Serviços</a>
+      <a href="#radar">Mercado &amp; Notícias</a>
+      <a href="#conexoes">Conexões</a>
+      <a href="#blog">Blog</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="top-acts">
+      <button class="admin-trigger" id="openAdminTop" type="button" title="Painel Administrativo (CMS)" aria-label="Abrir Painel Administrativo">
+        <svg class="i" viewBox="0 0 24 24" data-i="settings"></svg>
+      </button>
+      <a class="btn btn-wa btn-sm" id="topWa" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" id="topWaIc"></svg><span>WhatsApp</span></a>
+    </div>
+  </div>
+</header>
+<div class="ticker" aria-label="Destaques do mercado"><div class="track" id="ticker"></div></div>
+
+<main id="topo">
+
+<!-- ======================= HERO + SELETOR ======================= -->
+<div class="hero">
+  <div class="bg" id="heroBg"></div>
+  <div class="wrap grid">
+    <div>
+      <p class="eyebrow" style="color:var(--orange2)" id="heroEyebrow"></p>
+      <h1 id="heroTitle"></h1>
+      <p class="sub" id="heroSub"></p>
+      <div class="quick">
+        <a class="btn btn-primary" href="#imoveis">Ver imóveis <svg class="i" viewBox="0 0 24 24" data-i="arrow"></svg></a>
+        <a class="btn btn-ghost" href="#radar">Dados e notícias para investidores</a>
+      </div>
+      <div class="trust" id="heroTrust"></div>
+    </div>
+
+    <div class="chooser" id="chooser">
+      <p class="eyebrow">Comece por aqui</p>
+      <h2>O que você procura?</h2>
+      <div class="grp"><p class="grp-t">Imóveis &amp; investimento</p><div class="chips" id="chipsA"></div></div>
+      <div class="grp"><p class="grp-t">Espaços, marca &amp; negócios</p><div class="chips" id="chipsB"></div></div>
+      <div class="panel" id="panel" aria-live="polite"></div>
+    </div>
+  </div>
+</div>
+
+<div class="proof"><div class="wrap" id="proof"></div></div>
+
+<!-- ======================= IMÓVEIS ======================= -->
+<section id="imoveis">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Imóveis &amp; terrenos</p>
+        <h2 class="title">Oportunidades <em>selecionadas</em> no Preá</h2>
+        <p class="lead">Casas, terrenos e opções de Réveillon com atendimento de um corretor. Filtre abaixo ou fale direto no WhatsApp.</p>
+      </div>
+      <a class="btn btn-ghost" id="allProps" target="_blank" rel="noopener">Catálogo completo <svg class="i" viewBox="0 0 24 24" data-i="arrow"></svg></a>
+    </div>
+    <div class="filters" id="filters"></div>
+    <div class="cards" id="cards"></div>
+    <div class="more">
+      <div><strong>Não achou o que procura?</strong><br><span style="color:#b9b0a4;font-size:.9rem">Muitos imóveis não estão publicados. Conte seu perfil e receba uma curadoria.</span></div>
+      <a class="btn btn-wa" id="curadoria" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" data-i="wa"></svg> Pedir curadoria</a>
+    </div>
+    <p class="fine" style="margin-top:14px">Quer anunciar seu imóvel? <a id="anunciar" target="_blank" rel="noopener" style="color:var(--orange);font-weight:600;text-decoration:underline">Fale com a equipe</a>.</p>
+  </div>
+</section>
+
+<!-- ======================= GESTÃO & CONCIERGE ======================= -->
+<section id="gestao" class="dark">
+  <div class="wrap">
+    <div class="mgmt-top">
+      <div>
+        <p class="eyebrow" style="color:var(--orange2)">Gestão de imóveis &amp; concierge</p>
+        <h2 class="title">Compre no Preá. <em>Nós cuidamos do resto.</em></h2>
+        <p class="lead">Para quem investe à distância ou não quer se preocupar com a rotina: administração completa, locação, limpeza, manutenção e concierge para seus hóspedes — com a rede local da Conecta.</p>
+        <div class="models" id="models"></div>
+        <p class="fine">Condições, taxas e escopo definidos em proposta. Serviços de terceiros mediante orçamento aprovado.</p>
+      </div>
+      <form class="formcard" id="mgmtForm">
+        <h3>Quero administrar meu imóvel</h3>
+        <p class="s">Responda em 20 segundos e continue a conversa no WhatsApp.</p>
+        <div class="row2">
+          <div class="field"><label for="mfNome">Seu nome</label><input id="mfNome" placeholder="Nome"></div>
+          <div class="field"><label for="mfTipo">Tipo de imóvel</label>
+            <select id="mfTipo"><option>Casa</option><option>Apartamento</option><option>Casa em condomínio</option><option>Pousada / flat</option><option>Ainda vou comprar</option></select></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="mfBairro">Localização</label><input id="mfBairro" placeholder="Ex.: Setor Conduru"></div>
+          <div class="field"><label for="mfObj">Objetivo</label>
+            <select id="mfObj"><option>Administração completa</option><option>Locação por temporada</option><option>Locação de longa duração</option><option>Só limpeza e manutenção</option><option>Concierge para hóspedes</option><option>Quero entender as opções</option></select></div>
+        </div>
+        <div class="field"><label for="mfObs">Observações (opcional)</label><textarea id="mfObs" rows="2" placeholder="Número de quartos, se já aluga, prazos…"></textarea></div>
+        <button class="btn btn-wa" type="submit" style="width:100%;justify-content:center"><svg class="i" viewBox="0 0 24 24" data-i="wa"></svg> Enviar pelo WhatsApp</button>
+      </form>
+    </div>
+    <div class="svc" id="svc"></div>
+  </div>
+</section>
+
+<!-- ======================= SOLUÇÕES CONECTA ======================= -->
+<section id="solucoes">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Espaços, marca &amp; rede</p>
+        <h2 class="title">Seu próximo passo <em>tem lugar aqui.</em></h2>
+        <p class="lead">Escritório boutique à beira-mar para encontros, marcas e parcerias — e uma rede que abre portas no Preá.</p>
+      </div>
+    </div>
+    <div class="hub" id="hub"></div>
+  </div>
+</section>
+
+<!-- ======================= RADAR DO INVESTIDOR ======================= -->
+<section id="radar" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow" style="color:var(--sea)">Radar do investidor</p>
+        <h2 class="title">Dados e notícias <em>antes de decidir</em></h2>
+        <p class="lead">Preço por m², lançamentos, infraestrutura e o que a imprensa está dizendo sobre o Preá.</p>
+      </div>
+    </div>
+    <div class="radar">
+      <div id="news"></div>
+      <aside class="mkt" id="mkt"></aside>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CONEXÕES ======================= -->
+<section id="conexoes">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Conexões estratégicas</p>
+        <h2 class="title">Contatos úteis para <em>construir e investir</em></h2>
+        <p class="lead">Órgãos, conselhos e parceiros que você vai precisar — e a Conecta aponta o profissional certo.</p>
+      </div>
+      <a class="btn btn-ghost" id="cxWa" target="_blank" rel="noopener">Preciso de uma conexão específica</a>
+    </div>
+    <div class="cx-tabs" id="cxTabs"></div>
+    <div class="cx" id="cx"></div>
+  </div>
+</section>
+
+<!-- ======================= BLOG INTERNO ======================= -->
+<section id="blog" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Blog Conecta</p>
+        <h2 class="title">Guias e análises para <em>quem investe</em></h2>
+        <p class="lead">Artigos completos para ler direto aqui — produzidos e atualizados pela nossa equipe no Preá.</p>
+      </div>
+      <button class="btn btn-ghost" id="btnManageBlog" type="button"><svg class="i" viewBox="0 0 24 24" data-i="edit"></svg> Gerenciar matérias</button>
+    </div>
+    <div class="blog-bar" id="blogBar"></div>
+    <div class="posts" id="posts"></div>
+  </div>
+</section>
+
+<!-- ======================= CONTATO ======================= -->
+<section id="contato" class="dark contact">
+  <div class="wrap grid">
+    <div>
+      <p class="eyebrow" style="color:var(--orange2)">Fale com a Conecta</p>
+      <h2>Qual é a sua próxima <em>conexão?</em></h2>
+      <p class="lead">Conte com nosso espaço e nossa rede de contatos para o seu próximo projeto.</p>
+      <div class="cta-row">
+        <a class="btn btn-wa" id="ctaWa" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" data-i="wa"></svg> Conversar com a Conecta</a>
+        <a class="btn btn-ghost" id="ctaWaImov" target="_blank" rel="noopener" style="color:#f2ebe0">Falar com um corretor</a>
+      </div>
+    </div>
+    <address class="clist" style="font-style:normal" id="clist"></address>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span id="copy"></span>
+    <span id="flinks"></span>
+  </div>
+</footer>
+<a class="fab" id="fab" target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg class="i" viewBox="0 0 24 24" data-i="wa"></svg></a>
+
+<!-- ======================= MODAL: LEITOR DE MATÉRIA DO BLOG ======================= -->
+<div class="modal-backdrop" id="articleModal" role="dialog" aria-modal="true" aria-labelledby="artTitle">
+  <div class="article-modal">
+    <div class="article-head">
+      <span class="cat-pill" id="artCat">Blog Conecta</span>
+      <div style="display:flex;gap:8px;align-items:center">
+        <button class="btn btn-ghost btn-xs" id="artShareBtn" type="button"><svg class="i" viewBox="0 0 24 24" data-i="copy"></svg> Copiar link</button>
+        <button class="icon-close" id="artClose" type="button" aria-label="Fechar artigo"><svg class="i" viewBox="0 0 24 24" data-i="close"></svg></button>
+      </div>
+    </div>
+    <div class="article-scroll" id="artScroll"></div>
+  </div>
+</div>
+
+<!-- ======================= MODAL: LOGIN ADMIN ======================= -->
+<div class="modal-backdrop" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+  <form class="small-modal" id="loginForm">
+    <p class="eyebrow">Acesso restrito</p>
+    <h3 id="loginTitle">Painel Administrativo</h3>
+    <p>Digite o PIN de acesso para gerenciar matérias do blog, imóveis, notícias, mercado e demais conteúdos do site.</p>
+    <div class="field">
+      <label for="pinInput">PIN de acesso</label>
+      <input id="pinInput" type="password" inputmode="numeric" placeholder="Digite o PIN" autocomplete="off" required>
+      <span class="hint">PIN padrão inicial: <strong>1234</strong> (você pode alterá-lo na aba Geral &amp; Backup).</span>
+    </div>
+    <div class="acts">
+      <button class="btn btn-ghost btn-sm" type="button" id="loginCancel">Cancelar</button>
+      <button class="btn btn-primary btn-sm" type="submit">Entrar no painel</button>
+    </div>
+  </form>
+</div>
+
+<!-- ======================= MODAL: CONFIRMAÇÃO PERSONALIZADA ======================= -->
+<div class="modal-backdrop" id="confirmModal" role="dialog" aria-modal="true" aria-labelledby="confirmTitle">
+  <div class="small-modal">
+    <h3 id="confirmTitle">Confirmar ação</h3>
+    <p id="confirmText"></p>
+    <div class="acts">
+      <button class="btn btn-ghost btn-sm" type="button" id="confirmNo">Cancelar</button>
+      <button class="btn btn-danger btn-sm" type="button" id="confirmYes">Confirmar</button>
+    </div>
+  </div>
+</div>
+
+<!-- ======================= PAINEL DE CONTROLE ADMIN (CMS) ======================= -->
+<div class="admin-overlay" id="adminOverlay" role="dialog" aria-modal="true" aria-label="Painel de Controle Conecta Preá">
+  <div class="admin-shell">
+    <aside class="admin-side">
+      <div class="admin-brand">
+        <strong>Conecta <span style="color:var(--orange2)">Admin</span></strong>
+        <small>Gerenciador de Conteúdo (CMS)</small>
+      </div>
+      <nav class="admin-nav" id="adminNav" aria-label="Abas do painel"></nav>
+      <div class="admin-side-foot">
+        <button class="btn btn-ghost btn-sm" type="button" id="adminExportBtn" style="color:#efe7da;justify-content:center">
+          <svg class="i" viewBox="0 0 24 24" data-i="download"></svg> Exportar Backup
+        </button>
+        <button class="btn btn-primary btn-sm" type="button" id="adminCloseSide" style="justify-content:center">
+          Ver site ao vivo
+        </button>
+      </div>
+    </aside>
+    <div class="admin-main">
+      <div class="admin-top">
+        <h2 id="adminHeading">Gerenciar Blog</h2>
+        <div class="admin-top-acts">
+          <button class="btn btn-ghost btn-sm" type="button" id="adminLockBtn" title="Bloquear sessão admin">
+            <svg class="i" viewBox="0 0 24 24" data-i="lock"></svg> Sair
+          </button>
+          <button class="icon-close" type="button" id="adminCloseTop" aria-label="Fechar painel">
+            <svg class="i" viewBox="0 0 24 24" data-i="close"></svg>
+          </button>
+        </div>
+      </div>
+      <div class="admin-body" id="adminBody"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ======================= TOASTS ======================= -->
+<div class="toast-wrap" id="toastWrap" aria-live="polite"></div>
+
+<noscript><p style="padding:20px">Ative o JavaScript para visualizar o conteúdo deste site.</p></noscript>
+
+<script>
+/* ==========================================================================
+   CONECTA PREÁ — DADOS PADRÃO + CMS INTERNO + BLOG FUNCIONAL
+   ==========================================================================
+   Todos os dados abaixo servem como padrão inicial. Quando editados pelo
+   Painel Admin, ficam salvos automaticamente no navegador (localStorage) e
+   podem ser exportados/importados em JSON a qualquer momento.
+   ========================================================================== */
+
+const STORAGE_KEY = 'conecta_prea_cms_v1';
+const PIN_KEY = 'conecta_prea_admin_pin_v1';
+const b44 = f => `https://media.base44.com/images/public/69c7cdc40d56b8a15d493931/${f}/v1/fill/w_640,h_853,al_c,q_85/${f.replace(/\.[a-z]+$/i,'')}.webp`;
+const FICHA = id => `https://euamoprea.com.br/imoveis/${id}`;
+
+const DEFAULT_DATA = {
+  SITE: {
+    nome: "Conecta Preá",
+    logo: "",
+    logoInverter: true,
+    heroEyebrow: "Conecta Preá · Investimento & negócios · Praia do Preá, Ceará",
+    heroTitulo: "Invista, more e faça negócios no *Preá.*",
+    heroSub: "Imóveis, administração completa do seu investimento e uma rede de contatos à beira-mar — tudo em um só lugar. Escolha ao lado o que você procura.",
+    heroImg: "https://base44.app/api/apps/69c7cdc40d56b8a15d493931/files/mp/public/69c7cdc40d56b8a15d493931/0f68cf433_conecta-hero-experience-treated.jpg",
+    whatsappGeral: "5588993004106",
+    whatsappImoveis: "5588981710616",
+    whatsappGestao: "5588981710616",
+    telefoneExibido: "(88) 99300-4106",
+    instagram: "https://www.instagram.com/conectaprea/",
+    instagramUser: "@conectaprea",
+    endereco: "Av. Beira-Mar · Praia do Preá · Cruz/CE",
+    catalogoCompleto: "https://euamoprea.com.br/imoveis",
+    blogCompleto: "https://euamoprea.com.br/blog",
+    siteGuia: "https://euamoprea.com.br/",
+    privacidade: "https://euamoprea.com.br/politica-de-privacidade",
+    termos: "https://euamoprea.com.br/termos-de-uso",
+    totalImoveisCatalogo: 119,
+    ticker: [
+      "Terrenos no Preá: mediana de R$ 972/m² (preço pedido em anúncios)",
+      "Casas e apartamentos: mediana de R$ 7.088/m² (preço pedido em anúncios)",
+      "GAV Resorts inaugura o Jeriquia no Preá em dezembro de 2026",
+      "Anantara: resort de luxo no Vila Carnaúba previsto para 2027",
+      "Aeroporto de Jericoacoara: investimento de R$ 100 milhões e voos internacionais",
+      "Preá valoriza 320% em 10 anos, segundo O Povo / Diário do Nordeste (2025)"
+    ],
+    destaques: [
+      { v: "119", l: "imóveis no catálogo" },
+      { v: "R$ 972", l: "mediana/m² em terrenos*" },
+      { v: "R$ 7.088", l: "mediana/m² em casas e apts*" },
+      { v: "~30 min", l: "do aeroporto de Jericoacoara" }
+    ],
+    heroNumeros: [
+      { v: "Compra", l: "curadoria de imóveis e terrenos" },
+      { v: "Gestão", l: "locação, limpeza e manutenção" },
+      { v: "Concierge", l: "para você e seus hóspedes" }
+    ]
+  },
+  MERCADO: {
+    atualizado: "17/11/2026",
+    totalAnuncios: 45,
+    terrenos: { mediana: 972, amostra: 27, min: 114, max: 13750 },
+    casas:    { mediana: 7088, amostra: 18 },
+    bairros: [
+      { nome: "Preá", n: 10, mediana: 1140 },
+      { nome: "Parque Nacional", n: 3, mediana: 1100 },
+      { nome: "Bairro Cavalo Bravo", n: 4, mediana: 397 },
+      { nome: "Outros bairros", n: 10, mediana: 345 }
+    ],
+    nota: "Mediana do preço pedido por m² nos anúncios ativos de venda da plataforma. São valores de anúncio, não de venda concluída. Terrenos usam a área do terreno; casas e apartamentos, a área construída."
+  },
+  IMOVEIS: [
+    { id:"im1", ref:"VND-1048", tipo:"venda", destaque:true, titulo:"Casa com jacuzzi à venda no Setor Conduru", bairro:"Setor Rancho do Peixe", preco:795000, quartos:2, suites:1, vagas:2, img:b44("b1f341bbe_image.png"), link:FICHA("6ad2cdb84fdb9cfd755b077c") },
+    { id:"im2", ref:"VND-1034", tipo:"venda", titulo:"Casa com 3 suítes no Coconut Beach Residence", bairro:"Bairro Castelhano", preco:1200000, quartos:3, suites:3, vagas:2, img:b44("b2326489c_image.png"), link:FICHA("6aba7da7f2b3fc0a17fc02a0") },
+    { id:"im3", ref:"VND-1010", tipo:"venda", titulo:"Casa com 3 quartos no Conduru III", bairro:"Preá", preco:760000, quartos:3, suites:2, vagas:1, img:b44("08ea01a6e_VilaConduru-41.jpg"), link:FICHA("6a105ce2334c7aa9411c19e7") },
+    { id:"im4", ref:"VND-1005", tipo:"venda", titulo:"Casa com 1 suíte no Centro do Preá", bairro:"Centro do Preá", preco:360000, quartos:1, suites:1, vagas:1, img:b44("121184b3c_WhatsAppImage2026-05-07at1236014.jpeg"), link:FICHA("69fce0bb2295ef8ea02b315e") },
+    { id:"im5", ref:"TER-3018", tipo:"terreno", titulo:"Terreno de 665 m² no Setor de Mansões", bairro:"Setor de Mansões", preco:900000, area:665, img:b44("8e8ebf011_image.png"), link:FICHA("6a54f5127ebdee76d86f141a") },
+    { id:"im6", ref:"TER-3016", tipo:"terreno", titulo:"Terreno de 513 m² próximo ao Rancho do Kite", bairro:"Preá", preco:500000, area:513, img:b44("0508c95f8_image.png"), link:FICHA("6a50eef3b16dda0f4be615da") },
+    { id:"im7", ref:"TER-3045", tipo:"terreno", titulo:"Terreno 8x45 m próximo ao Munzuá", bairro:"Preá", preco:50000, area:360, img:b44("35cc1d571_image.png"), link:FICHA("6abd4b7adb277adf5d11c665") },
+    { id:"im8", ref:"VND-1013", tipo:"reveillon", titulo:"Casa dúplex para Réveillon no Setor Mansões", bairro:"Setor de Mansões", preco:100000, precoLabel:"Consulte o período e as condições", quartos:3, suites:3, vagas:2, img:b44("9cef81b3b_WhatsAppImage2026-09-24at144829.jpeg"), link:FICHA("6ac412ea78c21c7a3f9bbba7") },
+    { id:"im9", ref:"VND-1009", tipo:"reveillon", titulo:"Casa de alto padrão em condomínio para Réveillon", bairro:"Setor Conduru", preco:45000, precoLabel:"Consulte o período e as condições", quartos:3, vagas:1, img:b44("08ea01a6e_VilaConduru-41.jpg"), link:FICHA("6ac1094072fce2850d16d7f7") }
+  ],
+  HUB: [
+    { id:"sala", icon:"monitor", nome:"Sala, cursos e palestras", titulo:"O espaço para o seu próximo encontro.",
+      texto:"Receba reuniões, cursos e palestras em um ambiente acolhedor, com formato definido conforme a atividade.",
+      bullets:["Somente o espaço ou espaço + organização completa","Buffet, coffee break, bartender e recepção coordenados","Proposta com tudo discriminado"],
+      img:"", cta:"Consultar disponibilidade",
+      msg:"Olá! Gostaria de consultar a disponibilidade de espaço para uma reunião, curso ou palestra na Conecta. Quero conhecer as modalidades e solicitar uma proposta.",
+      detalhes:[
+        { h:"Somente o espaço", itens:["Ambiente e mobiliário previstos na reserva.","Disposição da sala combinada previamente.","Capacidade e recursos confirmados na proposta.","Buffet, bebidas, equipe dedicada, inscrições e equipamentos extras não incluídos."] },
+        { h:"Espaço + organização", itens:["Coordenação de buffet, coffee break, bebidas e bartender.","Recepção, apoio e inscrições.","Decoração, mobiliário e equipamentos adicionais.","Coordenação dos fornecedores contratados."] },
+        { h:"Proposta e contratação", texto:"Espaço, organização e fornecedores são discriminados na proposta. Serviços externos são pagos pelo cliente mediante orçamento aprovado. A consulta de disponibilidade não confirma uma reserva." }
+      ]},
+    { id:"lancamentos", icon:"rocket", nome:"Lançamentos e apresentações", titulo:"Apresente sua próxima novidade.",
+      texto:"Um ambiente à beira-mar para apresentar coleções, produtos, serviços e novos negócios.",
+      bullets:["Espaço para demonstrações e planejamento do encontro","Recepção, convites e fornecedores, quando contratados","Publicidade Eu Amo Preá opcional"],
+      img:"", cta:"Planejar meu lançamento",
+      msg:"Olá! Quero planejar um lançamento ou apresentação na Conecta e conhecer as opções de organização e publicidade Eu Amo Preá.",
+      detalhes:[
+        { h:"Formato do encontro", itens:["Espaço para demonstrações.","Planejamento do encontro.","Recepção, convites e fornecedores, quando contratados.","Publicidade Eu Amo Preá opcional."] },
+        { h:"Lançamento + inauguração", texto:"No combo lançamento + inauguração, o encontro na Conecta deve acontecer pelo menos 15 dias antes da inauguração. São produtos separados: a Conecta recebe o lançamento e o Eu Amo Preá cuida da publicidade." }
+      ]},
+    { id:"marca", icon:"tag", nome:"Marca Residente", titulo:"Sua marca presente na Conecta.",
+      texto:"Exponha produtos, serviços e lançamentos dentro do escritório por um mês.",
+      bullets:["Local de exposição escolhido em conjunto","Produtos ou materiais da marca em destaque","QR code e apresentação institucional junto à exposição"],
+      img:"", cta:"Quero apresentar minha marca",
+      msg:"Olá! Tenho interesse em Marca Residente e gostaria de apresentar minha marca na Conecta por um mês.",
+      detalhes:[
+        { h:"A exposição", itens:["Local de exposição escolhido em conjunto.","Produtos ou materiais da marca em destaque.","QR code e apresentação institucional junto à exposição."] },
+        { h:"Condições da ativação", texto:"A empresa fornece os produtos e materiais e paga os custos da ativação, incluindo QR code e apresentação institucional. Dimensões, instalação e responsabilidades são combinadas antes da contratação." }
+      ]},
+    { id:"clube", icon:"users", nome:"Clube Conecta", titulo:"Faça parte das conexões.",
+      texto:"Uma comunidade de empresas e empreendedores para trocar experiências, construir relações e desenvolver parcerias no Preá.",
+      bullets:["Conheça outros negócios da região","Participe da vida empresarial do Preá","Condições de participação consultadas com a equipe"],
+      img:"", cta:"Quero conhecer o Clube",
+      msg:"Olá! Gostaria de conhecer o Clube Conecta e consultar as condições de participação.",
+      detalhes:[ { h:"Participação", texto:"As condições de participação são consultadas com a equipe. Converse conosco para conhecer o formato do Clube." } ]},
+    { id:"representacao", icon:"briefcase", nome:"Representação comercial", titulo:"Conexões para apresentar o seu negócio.",
+      texto:"Apresentamos produtos e serviços a potenciais clientes e parceiros da região, com reuniões e acompanhamento das oportunidades previstas no contrato.",
+      bullets:["Comissão a negociar","Escopo, território e poderes de negociação definidos previamente","Aproximações sujeitas ao interesse das partes, sem garantia de fechamento"],
+      img:"", cta:"Conversar sobre representação",
+      msg:"Olá! Gostaria de conversar sobre representação comercial, comissão, território e escopo de atuação da Conecta para meu negócio.",
+      detalhes:[ { h:"Um escopo combinado previamente", itens:["Comissão a negociar.","Escopo, território, responsabilidades e poderes de negociação definidos previamente.","Aproximações sujeitas ao interesse das partes, sem garantia de fechamento."] } ]},
+    { id:"experiencias", icon:"compass", nome:"Estadias e experiências", titulo:"Viva o Preá com conexões locais.",
+      texto:"Organizamos seu roteiro conforme as datas, o perfil do grupo e o orçamento.",
+      bullets:["Hospedagens, restaurantes e passeios","Escolas de kite e atividades com parceiros","Apoio com reservas, quando contratado"],
+      img:"", cta:"Planejar minha experiência",
+      msg:"Olá! Gostaria de planejar uma estadia ou experiência no Preá. Quero conversar sobre datas, perfil do grupo, orçamento e condições dos parceiros.",
+      detalhes:[ { h:"Planejamento e confirmações", texto:"Reservas dependem de confirmação e atividades podem depender do clima. Planejamento e parceiros têm condições próprias. Eventuais comissões são informadas na contratação." } ]}
+  ],
+  MODELOS: [
+    "Administração completa do imóvel",
+    "Locação e comercialização (temporada ou longa duração)",
+    "Concierge avulso, por estadia",
+    "Limpeza e manutenção recorrentes"
+  ],
+  SERVICOS_GESTAO: [
+    { icon:"key", t:"Locação", p:"Temporada e longa duração: anúncio, definição de diárias e preços, triagem de hóspedes ou inquilinos, contratos e recebimento." },
+    { icon:"sparkles", t:"Limpeza e enxoval", p:"Limpeza entre estadias, lavanderia, reposição de enxoval e amenities, com checklist de entrega." },
+    { icon:"wrench", t:"Manutenção", p:"Rotina preventiva e reparos: elétrica, hidráulica, piscina, jardim, ar-condicionado e pequenas reformas, com orçamento aprovado." },
+    { icon:"bell", t:"Concierge do hóspede", p:"Check-in e check-out, boas-vindas, transfer, reservas de restaurantes, passeios e escolas de kite com a rede local." },
+    { icon:"chart", t:"Gestão financeira e relatórios", p:"Prestação de contas, controle de custos (condomínio, IPTU, consumo) e relatório periódico ao proprietário." },
+    { icon:"shield", t:"Vistoria e segurança", p:"Visitas de vistoria em casa vazia, registro fotográfico, controle de chaves e acompanhamento de obras." }
+  ],
+  NOTICIAS: [
+    { id:"n1", cat:"Investimento", titulo:"Anantara chega ao Brasil: resort de luxo no Vila Carnaúba em 2027", fonte:"Revista Hotéis · 2025", url:"https://www.anantara.com/en/prea-ceara", img:"" },
+    { id:"n2", cat:"Mercado imobiliário", titulo:"GAV Resorts inaugura Jeriquia no Preá em dezembro de 2026", fonte:"GAV Resorts · 2025", url:"https://www.gavresorts.com.br/", img:"" },
+    { id:"n3", cat:"Infraestrutura", titulo:"Aeroporto de Jericoacoara: R$ 100 milhões e voos internacionais", fonte:"Melhores Destinos · Mar 2026", url:"https://www.melhoresdestinos.com.br/aeroporto-jericoacoara-voos-internacionais.html", img:"" },
+    { id:"n4", cat:"Mercado", titulo:"Preá valoriza 320% em 10 anos e atrai investidores internacionais", fonte:"O Povo / Diário do Nordeste · 2025", url:"", img:"" },
+    { id:"n5", cat:"Turismo de luxo", titulo:"Praia do Preá: nova fronteira do luxo no litoral cearense", fonte:"Exame Invest · 2024", url:"", img:"" },
+    { id:"n6", cat:"Urbanismo", titulo:"Cruz: Plano Diretor aprovado define novas zonas de expansão do Preá", fonte:"Prefeitura de Cruz · 2024", url:"", img:"" }
+  ],
+  POSTS: [
+    {
+      id:"post-terreno-prea",
+      cat:"Guia do comprador",
+      titulo:"Como comprar terreno no Preá: checklist de documentação",
+      resumo:"Escritura, matrícula, regularização e licenças: o que conferir antes de assinar.",
+      autor:"Equipe Conecta Preá",
+      data:"12/11/2026",
+      tempoLeitura:"4 min",
+      url:"",
+      img:"",
+      exemplo:false,
+      conteudo:`Comprar um terreno na Praia do Preá exige atenção redobrada à documentação para garantir segurança jurídica e agilidade na hora de construir ou revender.
+
+## 1. Matrícula atualizada e certidão de ônus
+Peça a certidão de inteiro teor e de ônus reais diretamente no Cartório de Registro de Imóveis de Cruz. Ela confirma quem é o proprietário legal e se existe algum bloqueio judicial, hipoteca ou pendência.
+
+## 2. Verificação de zoneamento e Plano Diretor
+Antes de fechar negócio, verifique em qual zona do Plano Diretor de Cruz o lote está inserido. Isso define:
+- Taxa de ocupação máxima permitida
+- Gabarito (altura máxima da edificação)
+- Recuos obrigatórios e uso permitido (residencial, comercial ou misto)
+
+## 3. Licenciamento ambiental e faixa costeira
+Imóveis próximos à faixa de praia ou áreas de dunas podem exigir consulta prévia à SEMACE e à Secretaria de Meio Ambiente municipal.
+
+> Dica Conecta: Nossa rede de advogados imobiliários, arquitetos e despachantes locais faz a análise documental completa antes da assinatura do contrato.`
+    },
+    {
+      id:"post-casa-temporada",
+      cat:"Investimento",
+      titulo:"Casa de temporada no Preá: o que avaliar antes de investir",
+      resumo:"Localização, sazonalidade, custos de operação e modelos de administração.",
+      autor:"Equipe Conecta Preá",
+      data:"05/11/2026",
+      tempoLeitura:"5 min",
+      url:"",
+      img:"",
+      exemplo:false,
+      conteudo:`O Preá se consolidou como um dos destinos mais desejados do Nordeste, unindo temporada extensa de ventos para o kitesurf e turismo de alto padrão durante todo o ano.
+
+## O que mais impacta a taxa de ocupação
+- Proximidade da praia e facilidade de acesso às escolas de kite e restaurantes
+- Áreas de lazer bem resolvidas (piscina, deck, espaço gourmet e guarda-equipamentos)
+- Qualidade das fotos, precificação dinâmica e agilidade no atendimento ao hóspede
+
+## Custos operacionais para colocar na ponta do lápis
+Além do valor de aquisição, considere manutenção preventiva contra maresia, jardinagem, piscina, limpeza entre estadias, reposição de enxoval, energia elétrica e taxa de administração.
+
+## Gestão profissional à distância
+Proprietários que investem de outras cidades costumam optar pela administração completa: da divulgação e check-in ao concierge e prestação de contas mensal.`
+    },
+    {
+      id:"post-plano-diretor",
+      cat:"Legislação",
+      titulo:"Plano Diretor de Cruz: o que muda para quem vai construir",
+      resumo:"Zonas de uso, gabarito e taxa de ocupação explicados de forma prática.",
+      autor:"Equipe Conecta Preá",
+      data:"28/10/2026",
+      tempoLeitura:"3 min",
+      url:"",
+      img:"",
+      exemplo:false,
+      conteudo:`A aprovação e atualização das diretrizes urbanísticas de Cruz trazem mais previsibilidade para investidores, construtores e moradores da Praia do Preá.
+
+## Principais pontos de atenção no projeto
+- Respeito aos recuos frontais e laterais conforme o setor
+- Planejamento de saneamento, fossa ecológica ou ligação à rede
+- Compatibilidade do projeto arquitetônico com a aprovação de alvará na Prefeitura de Cruz
+
+## Por que contratar profissionais locais
+Arquitetos e engenheiros familiarizados com os trâmites de Cruz e com as condições climáticas da região (vento constante, insolação e maresia) reduzem custos de obra e evitam retrabalho na aprovação.`
+    }
+  ],
+  CONEXOES: [
+    { id:"cx1", cat:"Utilidades", nome:"ENEL Ceará", desc:"Distribuição de energia elétrica. Ligação de novos empreendimentos.", tel:"08002850196", rotulo:"0800 285 0196" },
+    { id:"cx2", cat:"Utilidades", nome:"CAGECE", desc:"Companhia de Água e Esgoto do Ceará. Ligações e regularizações.", tel:"8531015722", rotulo:"(85) 3101-5722" },
+    { id:"cx3", cat:"Utilidades", nome:"Energias Renováveis", desc:"Consultores de energia solar e captação de água pluvial para obras.", wa:true },
+    { id:"cx4", cat:"Governo", nome:"Prefeitura de Cruz", desc:"Alvarás, IPTU, certidões e Plano Diretor.", tel:"8836331100", rotulo:"(88) 3633-1100" },
+    { id:"cx5", cat:"Governo", nome:"SEMACE", desc:"Superintendência Estadual do Meio Ambiente. Licenciamento ambiental.", url:"https://www.semace.ce.gov.br/" },
+    { id:"cx6", cat:"Governo", nome:"Secretaria de Turismo (SETUR)", desc:"Turismo e desenvolvimento da região costeira.", url:"https://www.setur.ce.gov.br/" },
+    { id:"cx7", cat:"Governo", nome:"Governo do Estado do Ceará", desc:"Programas de desenvolvimento e incentivos fiscais.", url:"https://www.ceara.gov.br/" },
+    { id:"cx8", cat:"Jurídico", nome:"Cartório de Cruz", desc:"Registro de imóveis, escrituras e certidões.", tel:"8836331234", rotulo:"(88) 3633-1234" },
+    { id:"cx9", cat:"Jurídico", nome:"Advocacia imobiliária", desc:"Regularização fundiária e contratos imobiliários no Preá.", wa:true },
+    { id:"cx10", cat:"Jurídico", nome:"Detran CE", desc:"Documentação veicular e habilitações para transporte de materiais.", url:"https://www.detran.ce.gov.br/" },
+    { id:"cx11", cat:"Técnico", nome:"CREA-CE", desc:"Conselho de Engenharia e Agronomia. Registro de obras e profissionais.", url:"https://www.creace.org.br/" },
+    { id:"cx12", cat:"Técnico", nome:"CAU-CE", desc:"Conselho de Arquitetura e Urbanismo. ART/RRT e projetos.", url:"https://www.cauceara.org.br/" },
+    { id:"cx13", cat:"Técnico", nome:"Aguama Ambiental", desc:"Licenciamento ambiental, estudos de impacto e Festival de Sustentabilidade 2026.", wa:true },
+    { id:"cx14", cat:"Técnico", nome:"IBAMA / SEMACE", desc:"Licenças ambientais para empreendimentos na zona costeira.", url:"https://www.semace.ce.gov.br/" }
+  ]
+};
+
+const TIPOS = { venda:"Venda", terreno:"Terreno", reveillon:"Réveillon", temporada:"Temporada", aluguel:"Aluguel" };
+const TIPOS_PLURAL = { venda:"Casas à venda", terreno:"Terrenos", reveillon:"Réveillon", temporada:"Temporada", aluguel:"Aluguel" };
+
+const INTENCOES_BASE = [
+  { id:"investir", g:"A", icon:"chart", label:"Quero investir",
+    titulo:"Investir no Preá com dados e gente na ponta.",
+    texto:"Entenda preço por m², lançamentos e infraestrutura da região e receba uma curadoria de imóveis e terrenos — da compra à administração.",
+    bullets:["Referência de preço/m² por bairro (valores de anúncio)","Curadoria de imóveis e terrenos","Administração, locação e concierge depois da compra"],
+    cta:"Falar com um consultor", numero:"whatsappImoveis",
+    msg:"Olá! Quero investir no Preá e gostaria de uma curadoria de oportunidades.",
+    sec:{ label:"Ver mercado e notícias", href:"#radar" } },
+  { id:"comprar", g:"A", icon:"home", label:"Comprar imóvel",
+    titulo:"Encontre sua casa no Preá.",
+    texto:"Casas em condomínio, à beira-mar ou no centro do Preá, com atendimento de um corretor e assessoria na negociação.",
+    bullets:["Visitas presenciais ou virtuais","Proposta com transparência e assessoria jurídica","Opção de administrar o imóvel depois"],
+    cta:"Quero comprar", numero:"whatsappImoveis", msg:"Olá! Quero comprar um imóvel no Preá. Pode me ajudar?",
+    sec:{ label:"Ver casas à venda", filtro:"venda" } },
+  { id:"terreno", g:"A", icon:"map", label:"Comprar terreno",
+    titulo:"Terrenos com referência de preço.",
+    texto:"Compare o valor por m² do anúncio com a mediana de cada bairro antes de negociar.",
+    bullets:["Mediana atualizada em terrenos (anúncios)","Apoio com Plano Diretor e licenciamento","Rede de arquitetos, engenheiros e advogados"],
+    cta:"Quero um terreno", numero:"whatsappImoveis", msg:"Olá! Estou procurando um terreno no Preá. Pode me enviar opções?",
+    sec:{ label:"Ver terrenos", filtro:"terreno" } },
+  { id:"temporada", g:"A", icon:"calendar", label:"Temporada & Réveillon",
+    titulo:"Alugue para a temporada ou para o Réveillon.",
+    texto:"Casas selecionadas para períodos específicos, com condições consultadas por data.",
+    bullets:["Opções para Réveillon","Concierge durante a estadia","Atividades e passeios com parceiros"],
+    cta:"Consultar datas", numero:"whatsappImoveis", msg:"Olá! Gostaria de alugar uma casa por temporada ou para o Réveillon no Preá.",
+    sec:{ label:"Ver opções de Réveillon", filtro:"reveillon" } },
+  { id:"administrar", g:"A", icon:"key", label:"Administrar meu imóvel",
+    titulo:"Locação, limpeza, manutenção e concierge.",
+    texto:"Entregue seu imóvel a quem conhece o Preá. Cuidamos da operação e prestamos contas de forma transparente.",
+    bullets:["Locação por temporada ou longa duração","Limpeza, enxoval e manutenção","Concierge para hóspedes e relatório ao proprietário"],
+    cta:"Quero administrar", numero:"whatsappGestao", msg:"Olá! Tenho um imóvel no Preá e gostaria de conhecer os serviços de administração e concierge.",
+    sec:{ label:"Ver serviços de gestão", href:"#gestao" } }
+];
+
+/* ==========================================================================
+   ESTADO GLOBAL E PERSISTÊNCIA (localStorage)
+   ========================================================================== */
+function clone(obj){ return JSON.parse(JSON.stringify(obj)); }
+
+function loadState(){
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if(!raw) return clone(DEFAULT_DATA);
+    const parsed = JSON.parse(raw);
+    return {
+      SITE: { ...clone(DEFAULT_DATA.SITE), ...(parsed.SITE || {}) },
+      MERCADO: { ...clone(DEFAULT_DATA.MERCADO), ...(parsed.MERCADO || {}) },
+      IMOVEIS: Array.isArray(parsed.IMOVEIS) ? parsed.IMOVEIS : clone(DEFAULT_DATA.IMOVEIS),
+      HUB: Array.isArray(parsed.HUB) ? parsed.HUB : clone(DEFAULT_DATA.HUB),
+      MODELOS: Array.isArray(parsed.MODELOS) ? parsed.MODELOS : clone(DEFAULT_DATA.MODELOS),
+      SERVICOS_GESTAO: Array.isArray(parsed.SERVICOS_GESTAO) ? parsed.SERVICOS_GESTAO : clone(DEFAULT_DATA.SERVICOS_GESTAO),
+      NOTICIAS: Array.isArray(parsed.NOTICIAS) ? parsed.NOTICIAS : clone(DEFAULT_DATA.NOTICIAS),
+      POSTS: Array.isArray(parsed.POSTS) ? parsed.POSTS : clone(DEFAULT_DATA.POSTS),
+      CONEXOES: Array.isArray(parsed.CONEXOES) ? parsed.CONEXOES : clone(DEFAULT_DATA.CONEXOES)
+    };
+  } catch (err) {
+    console.warn('Falha ao carregar dados salvos, usando padrão.', err);
+    return clone(DEFAULT_DATA);
+  }
+}
+
+let STATE = loadState();
+
+function saveState(silent = false){
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(STATE));
+    return true;
+  } catch (err) {
+    console.error('Erro ao salvar no localStorage:', err);
+    toast('Limite de armazenamento do navegador atingido. Prefira usar links (URLs) para imagens grandes.', 'err');
+    return false;
+  }
+}
+
+/* ==========================================================================
+   ÍCONES E UTILITÁRIOS
+   ========================================================================== */
+const IC = {
+  arrow:'<path d="M7 7h10v10"/><path d="M7 17 17 7"/>',
+  wa:'<path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/>',
+  phone:'<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>',
+  globe:'<circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/>',
+  pin:'<path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/>',
+  insta:'<rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/>',
+  bed:'<path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8"/><path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"/><path d="M12 4v6"/><path d="M2 18h20"/>',
+  bath:'<path d="M10 4 8 6"/><path d="M17 19v2"/><path d="M2 12h20"/><path d="M7 19v2"/><path d="M9 5 7.621 3.621A2.121 2.121 0 0 0 4 5v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/>',
+  car:'<path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/>',
+  area:'<path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/>',
+  check:'<path d="M20 6 9 17l-5-5"/>',
+  home:'<path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/>',
+  map:'<path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"/><path d="M15 5.764v15"/><path d="M9 3.236v15"/>',
+  chart:'<path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="m19 9-5 5-4-4-3 3"/>',
+  key:'<circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6"/><path d="m15.5 7.5 3 3L22 7l-3-3"/>',
+  wrench:'<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94z"/>',
+  sparkles:'<path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/>',
+  bell:'<path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>',
+  shield:'<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>',
+  users:'<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
+  monitor:'<rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/>',
+  rocket:'<path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>',
+  tag:'<path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/>',
+  briefcase:'<rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>',
+  compass:'<circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/>',
+  calendar:'<path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/>',
+  star:'<path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/>',
+  news:'<path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8z"/>',
+  settings:'<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>',
+  close:'<path d="M18 6 6 18"/><path d="m6 6 12 12"/>',
+  plus:'<path d="M12 5v14"/><path d="M5 12h14"/>',
+  trash:'<path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>',
+  edit:'<path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/>',
+  up:'<path d="m18 15-6-6-6 6"/>',
+  down:'<path d="m6 9 6 6 6-6"/>',
+  upload:'<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/>',
+  download:'<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/>',
+  copy:'<rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>',
+  lock:'<rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',
+  image:'<rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/>'
+};
+
+const ICON_OPTIONS = ['home','map','chart','key','sparkles','wrench','bell','shield','users','monitor','rocket','tag','briefcase','compass','calendar','star','news','globe','pin'];
+const ic = (n, cls='') => `<svg class="i ${cls}" viewBox="0 0 24 24">${IC[n]||''}</svg>`;
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const brl = n => 'R$ ' + Math.round(Number(n)||0).toLocaleString('pt-BR');
+const wa = (numKey, text) => `https://wa.me/${STATE.SITE[numKey] || numKey}?text=${encodeURIComponent(text)}`;
+const $ = s => document.querySelector(s);
+const uid = (p='id') => `${p}_${Date.now().toString(36)}_${Math.random().toString(36).slice(2,6)}`;
+const imgTag = (src, alt='') => src ? `<img src="${esc(src)}" alt="${esc(alt)}" loading="lazy" onerror="this.remove()">` : '';
+const phBox = (src, icon, cls='') => `<div class="ph ${cls}">${ic(icon)}${imgTag(src)}</div>`;
+
+// Toast de notificação não bloqueante
+function toast(msg, type='ok'){
+  const wrap = $('#toastWrap');
+  const el = document.createElement('div');
+  el.className = `toast ${type}`;
+  el.innerHTML = `${ic(type==='err'?'close':'check')}<span>${esc(msg)}</span>`;
+  wrap.appendChild(el);
+  setTimeout(() => { el.style.opacity = '0'; el.style.transition = '.25s'; setTimeout(() => el.remove(), 260); }, 3200);
+}
+
+// Cópia compatível com iframe (sem navigator.clipboard)
+function copyText(text){
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.opacity = '0';
+  document.body.appendChild(ta);
+  ta.select();
+  try { document.execCommand('copy'); toast('Link copiado para a área de transferência!'); }
+  catch(e){ toast('Não foi possível copiar automaticamente.', 'err'); }
+  ta.remove();
+}
+
+// Modal de confirmação customizado (sem window.confirm)
+let confirmCallback = null;
+function askConfirm(title, text, onYes){
+  $('#confirmTitle').textContent = title;
+  $('#confirmText').textContent = text;
+  confirmCallback = onYes;
+  $('#confirmModal').classList.add('open');
+}
+$('#confirmNo').addEventListener('click', () => { $('#confirmModal').classList.remove('open'); confirmCallback = null; });
+$('#confirmYes').addEventListener('click', () => {
+  const cb = confirmCallback;
+  $('#confirmModal').classList.remove('open');
+  confirmCallback = null;
+  if(cb) cb();
+});
+
+// Compactação de imagem enviada pelo computador para caber bem no localStorage
+function compressImageFile(file, maxW = 1100, quality = 0.8){
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onerror = () => reject(new Error('Falha ao ler arquivo.'));
+    reader.onload = ev => {
+      const img = new Image();
+      img.onerror = () => reject(new Error('Arquivo não é uma imagem válida.'));
+      img.onload = () => {
+        const scale = img.width > maxW ? maxW / img.width : 1;
+        const w = Math.round(img.width * scale);
+        const h = Math.round(img.height * scale);
+        const canvas = document.createElement('canvas');
+        canvas.width = w; canvas.height = h;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0, w, h);
+        resolve(canvas.toDataURL('image/jpeg', quality));
+      };
+      img.src = ev.target.result;
+    };
+    reader.readAsDataURL(file);
+  });
+}
+
+/* ==========================================================================
+   RENDERIZAÇÃO DO SITE PÚBLICO
+   ========================================================================== */
+function formatHeroTitle(str){
+  return esc(str).replace(/\*([^*]+)\*/g, '<em>$1</em>');
+}
+
+function renderStatic(){
+  const S = STATE.SITE;
+  document.title = `${S.nome} | Imóveis, investimento e gestão na Praia do Preá`;
+  document.querySelectorAll('[data-i]').forEach(el => el.innerHTML = IC[el.dataset.i] || '');
+  $('#topWaIc').innerHTML = IC.wa;
+  const words = S.nome.trim().split(' ');
+  const wmHtml = words.length > 1 ? `${esc(words.slice(0,-1).join(' '))} <b>${esc(words[words.length-1])}</b>` : `<b>${esc(S.nome)}</b>`;
+  $('#brand').innerHTML = S.logo
+    ? `<img src="${esc(S.logo)}" alt="${esc(S.nome)}" class="${S.logoInverter?'inv':''}">`
+    : `<span class="wm">${wmHtml}</span>`;
+
+  $('#heroEyebrow').textContent = S.heroEyebrow || '';
+  $('#heroTitle').innerHTML = formatHeroTitle(S.heroTitulo || '');
+  $('#heroSub').textContent = S.heroSub || '';
+
+  const g = wa('whatsappGeral','Olá! Conheci a Conecta Preá e gostaria de conversar sobre meu próximo projeto.');
+  const gi = wa('whatsappImoveis','Olá! Vim pelo site da Conecta Preá e quero ajuda para encontrar um imóvel no Preá.');
+  $('#topWa').href = g; $('#ctaWa').href = g; $('#fab').href = g;
+  $('#ctaWaImov').href = gi; $('#curadoria').href = gi;
+  $('#anunciar').href = wa('whatsappImoveis','Olá! Quero anunciar meu imóvel na Conecta Preá.');
+  $('#cxWa').href = wa('whatsappImoveis','Olá! Vim pelo Conecta Preá e gostaria de informações sobre negócios imobiliários e contatos para o meu projeto.');
+  $('#allProps').href = S.catalogoCompleto || '#imoveis';
+  $('#heroBg').innerHTML = imgTag(S.heroImg);
+
+  const tickerArr = Array.isArray(S.ticker) && S.ticker.length ? S.ticker : ['Conecta Preá · Praia do Preá, Ceará'];
+  const t = tickerArr.map(s => `<span>${esc(s)}</span>`).join('');
+  $('#ticker').innerHTML = t + t;
+
+  $('#heroTrust').innerHTML = (S.heroNumeros || []).map(n => `<div><b>${esc(n.v)}</b>${esc(n.l)}</div>`).join('');
+  $('#proof').innerHTML = (S.destaques || []).map(d => `<div class="it"><b>${esc(d.v)}</b><span>${esc(d.l)}</span></div>`).join('');
+  $('#clist').innerHTML = `
+    <a href="tel:+${esc(S.whatsappGeral)}">${ic('phone')} ${esc(S.telefoneExibido)}</a>
+    <a href="${esc(S.instagram)}" target="_blank" rel="noopener">${ic('insta')} ${esc(S.instagramUser)}</a>
+    <p>${ic('pin')} ${esc(S.endereco)}</p>`;
+  $('#copy').textContent = `© ${new Date().getFullYear()} ${S.nome}. Todos os direitos reservados.`;
+  $('#flinks').innerHTML = `
+    <a href="${esc(S.siteGuia)}" target="_blank" rel="noopener">Eu Amo Preá</a>
+    <a href="${esc(S.privacidade)}" target="_blank" rel="noopener">Privacidade</a>
+    <a href="${esc(S.termos)}" target="_blank" rel="noopener">Termos de uso</a>
+    <button type="button" class="flink" id="openAdminFoot">Painel Admin</button>`;
+}
+
+/* ---------- Seletor de intenção ---------- */
+let intentAtual = 'investir';
+function getIntencoes(){
+  const hubItems = STATE.HUB.map(h => ({ id:'hub_'+h.id, g:'B', hub:h.id, icon:h.icon||'compass', label:h.nome }));
+  return [...INTENCOES_BASE, ...hubItems];
+}
+function intentData(it){
+  if(it.hub){
+    const h = STATE.HUB.find(x => x.id === it.hub);
+    if(h){
+      return { titulo:h.titulo, texto:h.texto, bullets:h.bullets||[], cta:h.cta||'Saiba mais', numero:'whatsappGeral', msg:h.msg||'', sec:{ label:'Ver como funciona', href:'#hub-'+h.id } };
+    }
+  }
+  return it;
+}
+function renderChooser(){
+  const list = getIntencoes();
+  if(!list.find(i => i.id === intentAtual)) intentAtual = list[0]?.id || 'investir';
+  const mk = it => `<button class="chip" type="button" data-intent="${esc(it.id)}" aria-pressed="${it.id===intentAtual}">${ic(it.icon)} ${esc(it.label)}</button>`;
+  $('#chipsA').innerHTML = list.filter(i=>i.g==='A').map(mk).join('');
+  $('#chipsB').innerHTML = list.filter(i=>i.g==='B').map(mk).join('');
+  const it = list.find(i => i.id === intentAtual);
+  if(!it) return;
+  const d = intentData(it);
+  const secAttr = d.sec.filtro ? `data-filtro="${esc(d.sec.filtro)}"` : `data-go="${esc(d.sec.href)}"`;
+  $('#panel').innerHTML = `
+    <h3>${esc(d.titulo)}</h3>
+    <p>${esc(d.texto)}</p>
+    <ul>${(d.bullets||[]).map(b=>`<li>${ic('check')}<span>${esc(b)}</span></li>`).join('')}</ul>
+    <div class="acts">
+      <a class="btn btn-wa btn-sm" target="_blank" rel="noopener" href="${wa(d.numero, d.msg)}">${ic('wa')} ${esc(d.cta)}</a>
+      <button class="btn btn-ghost btn-sm" type="button" ${secAttr}>${esc(d.sec.label)} ${ic('arrow')}</button>
+    </div>`;
+}
+
+/* ---------- Imóveis ---------- */
+const F = { tipo:'todos', bairro:'todos', ord:'destaque' };
+function aplicarFiltro(tipo){
+  F.tipo = tipo; F.bairro = 'todos'; renderProps();
+  go('#imoveis');
+}
+function renderProps(){
+  const imoveis = STATE.IMOVEIS;
+  const tipos = [...new Set(imoveis.map(i=>i.tipo))];
+  const bairros = [...new Set(imoveis.map(i=>i.bairro).filter(Boolean))].sort();
+  $('#filters').innerHTML =
+    `<button class="chip" data-tipo="todos" aria-pressed="${F.tipo==='todos'}">Todos (${imoveis.length})</button>` +
+    tipos.map(t=>`<button class="chip" data-tipo="${esc(t)}" aria-pressed="${F.tipo===t}">${esc(TIPOS_PLURAL[t]||t)}</button>`).join('') +
+    `<span class="sp"></span>
+     <select id="fBairro" aria-label="Bairro"><option value="todos">Todos os bairros</option>${bairros.map(b=>`<option ${F.bairro===b?'selected':''}>${esc(b)}</option>`).join('')}</select>
+     <select id="fOrd" aria-label="Ordenar"><option value="destaque" ${F.ord==='destaque'?'selected':''}>Destaques primeiro</option><option value="menor" ${F.ord==='menor'?'selected':''}>Menor preço</option><option value="maior" ${F.ord==='maior'?'selected':''}>Maior preço</option></select>`;
+  let list = imoveis.filter(i => (F.tipo==='todos'||i.tipo===F.tipo) && (F.bairro==='todos'||i.bairro===F.bairro));
+  if(F.ord==='menor') list.sort((a,b)=>(Number(a.preco)||0)-(Number(b.preco)||0));
+  else if(F.ord==='maior') list.sort((a,b)=>(Number(b.preco)||0)-(Number(a.preco)||0));
+  else list.sort((a,b)=>(b.destaque?1:0)-(a.destaque?1:0));
+  $('#cards').innerHTML = list.length ? list.map(card).join('') :
+    `<div class="empty">Nenhum imóvel nesta seleção. <a style="color:var(--orange);font-weight:600" href="${wa('whatsappImoveis','Olá! Não encontrei o imóvel que procuro no site. Pode me ajudar?')}" target="_blank" rel="noopener">Fale com um corretor</a>.</div>`;
+}
+function card(i){
+  const specs = [
+    i.area ? `<span>${ic('area')} ${esc(i.area)} m²</span>` : '',
+    i.quartos ? `<span>${ic('bed')} ${esc(i.quartos)} quarto${Number(i.quartos)>1?'s':''}</span>` : '',
+    i.suites ? `<span>${ic('bath')} ${esc(i.suites)} suíte${Number(i.suites)>1?'s':''}</span>` : '',
+    i.vagas ? `<span>${ic('car')} ${esc(i.vagas)} vaga${Number(i.vagas)>1?'s':''}</span>` : '',
+    (i.tipo==='terreno' && Number(i.area)>0 && Number(i.preco)>0) ? `<span>${ic('chart')} ${brl(i.preco/i.area)}/m²</span>` : ''
+  ].join('');
+  const msg = `Olá! Tenho interesse no imóvel ${i.ref} – ${i.titulo}. Pode me passar mais informações?`;
+  return `<article class="pcard">
+    <div class="ph" style="aspect-ratio:4/3">${ic(i.tipo==='terreno'?'map':'home')}${imgTag(i.img, i.titulo)}
+      <div class="tags"><span class="tag">${esc(TIPOS[i.tipo]||i.tipo)}</span>${i.destaque?`<span class="tag star">${ic('star')} Destaque</span>`:''}</div>
+      <div class="price"><strong>${brl(i.preco)}</strong><small>${esc(i.precoLabel || 'Valor de venda')}</small></div>
+    </div>
+    <div class="body">
+      <span class="place">${esc(i.bairro)} · Cruz</span>
+      <h3>${esc(i.titulo)}</h3>
+      <div class="specs">${specs}</div>
+      <div class="foot">
+        <span class="ref">Ref. ${esc(i.ref)}</span>
+        <span style="display:flex;gap:8px">
+          ${i.link?`<a class="btn btn-ghost btn-sm" href="${esc(i.link)}" target="_blank" rel="noopener">Ficha</a>`:''}
+          <a class="btn btn-wa btn-sm" href="${wa('whatsappImoveis',msg)}" target="_blank" rel="noopener">${ic('wa')} Tenho interesse</a>
+        </span>
+      </div>
+    </div>
+  </article>`;
+}
+
+/* ---------- Gestão ---------- */
+function renderGestao(){
+  $('#models').innerHTML = STATE.MODELOS.map(m=>`<div class="model">${ic('check')}<span>${esc(m)}</span></div>`).join('');
+  $('#svc').innerHTML = STATE.SERVICOS_GESTAO.map(s=>`<div class="c"><div class="ic">${ic(s.icon||'check')}</div><h3>${esc(s.t)}</h3><p>${esc(s.p)}</p></div>`).join('');
+}
+
+/* ---------- Hub ---------- */
+function renderHub(){
+  $('#hub').innerHTML = STATE.HUB.map(h => `
+    <article class="hcard" id="hub-${esc(h.id)}">
+      ${phBox(h.img, h.icon||'compass')}
+      <div class="b">
+        <span class="k">${ic(h.icon||'compass')} ${esc(h.nome)}</span>
+        <h3>${esc(h.titulo)}</h3>
+        <p>${esc(h.texto)}</p>
+        ${(h.detalhes && h.detalhes.length) ? `
+        <details><summary>Como funciona</summary>
+          ${h.detalhes.map(d=>`<h4>${esc(d.h)}</h4>` + (d.itens && d.itens.length ? `<ul>${d.itens.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>` : `<p>${esc(d.texto||'')}</p>`)).join('')}
+        </details>` : ''}
+        <a class="btn btn-primary btn-sm go" target="_blank" rel="noopener" href="${wa('whatsappGeral',h.msg||'')}" style="align-self:flex-start">${esc(h.cta||'Saiba mais')} ${ic('arrow')}</a>
+      </div>
+    </article>`).join('');
+}
+
+/* ---------- Radar: notícias + mercado + calculadoras ---------- */
+function renderNews(){
+  if(!STATE.NOTICIAS.length){
+    $('#news').innerHTML = `<div class="empty">Nenhuma notícia cadastrada. Adicione pelo Painel Admin.</div>`;
+    return;
+  }
+  const [f, ...rest] = STATE.NOTICIAS;
+  const wrapA = (n, cls, inner) => n.url ? `<a class="${cls}" href="${esc(n.url)}" target="_blank" rel="noopener">${inner}</a>` : `<div class="${cls}">${inner}</div>`;
+  const feat = wrapA(f, 'news-feat', `
+    ${phBox(f.img,'news')}
+    <div class="t"><span class="eyebrow" style="color:var(--orange2)">${esc(f.cat)}</span><h3>${esc(f.titulo)}</h3><span class="meta">${esc(f.fonte)} ${f.url?ic('arrow'):''}</span></div>`);
+  const items = rest.map(n => wrapA(n, 'nitem', `
+    ${phBox(n.img,'news')}
+    <div><span class="k">${esc(n.cat)}</span><h3>${esc(n.titulo)}</h3><span class="m">${esc(n.fonte)}</span></div>
+    <span class="ar">${n.url?ic('arrow'):''}</span>`)).join('');
+  $('#news').innerHTML = feat + `<div class="news-list">${items}</div>
+    <p class="fine">As notícias refletem as fontes citadas; confirme sempre as informações antes de decidir um investimento.</p>`;
+}
+
+let calcAtiva = 'terreno';
+function renderMkt(){
+  const M = STATE.MERCADO;
+  const bairros = M.bairros || [];
+  const max = bairros.length ? Math.max(...bairros.map(b=>Number(b.mediana)||0), 1) : 1;
+  $('#mkt').innerHTML = `
+    <p class="eyebrow" style="color:var(--orange2)">Mercado em números</p>
+    <h3>Preço por m² no Preá</h3>
+    <div class="stats">
+      <div class="stat"><b>${brl(M.terrenos.mediana)}</b><span>Mediana terrenos · ${esc(M.terrenos.amostra)} anúncios</span></div>
+      <div class="stat"><b>${brl(M.casas.mediana)}</b><span>Mediana casas/apts · ${esc(M.casas.amostra)} anúncios</span></div>
+    </div>
+    <div class="bars">${bairros.map(b=>`<div class="bar"><div class="l"><span>${esc(b.nome)} <small style="opacity:.6">(${esc(b.n)})</small></span><b>${brl(b.mediana)}/m²</b></div><div class="t"><div class="f" style="width:${Math.max(6,(Number(b.mediana)||0)/max*100)}%"></div></div></div>`).join('')}</div>
+    <p class="note">${esc(M.nota)} Atualizado em ${esc(M.atualizado)} · ${esc(M.totalAnuncios)} anúncios de venda.</p>
+    <div class="tabs" role="tablist"><button class="${calcAtiva==='terreno'?'on':''}" data-calc="terreno" role="tab">Valor de terreno</button><button class="${calcAtiva==='renda'?'on':''}" data-calc="renda" role="tab">Renda de temporada</button></div>
+    <div class="calc" id="calc"></div>`;
+  renderCalc(calcAtiva);
+}
+function renderCalc(w){
+  calcAtiva = w;
+  const M = STATE.MERCADO;
+  document.querySelectorAll('[data-calc]').forEach(b=>b.classList.toggle('on', b.dataset.calc===w));
+  if(w==='terreno'){
+    if(!M.bairros || !M.bairros.length){
+      $('#calc').innerHTML = `<p class="note">Cadastre bairros no Painel Admin para habilitar a calculadora.</p>`;
+      return;
+    }
+    $('#calc').innerHTML = `
+      <div class="field"><label for="cBairro">Bairro</label><select id="cBairro">${M.bairros.map((b,i)=>`<option value="${i}">${esc(b.nome)} (${esc(b.n)} anúncios)</option>`).join('')}</select></div>
+      <div class="field"><label for="cArea">Área do terreno (m²)</label><input id="cArea" type="number" min="1" value="360"></div>
+      <div class="res"><div><span>Mediana usada</span><span id="rM"></span></div><div class="big"><span>Valor de referência</span><span id="rV"></span></div></div>
+      <p class="note">Referência baseada em preço pedido; não é avaliação. Bairros com poucos anúncios têm menor confiabilidade.</p>`;
+    const up = () => {
+      const b = M.bairros[+$('#cBairro').value] || M.bairros[0]; const a = +$('#cArea').value || 0;
+      $('#rM').textContent = brl(b.mediana)+'/m²'; $('#rV').textContent = brl(b.mediana*a);
+    };
+    $('#cBairro').oninput = up; $('#cArea').oninput = up; up();
+  } else {
+    $('#calc').innerHTML = `
+      <div class="row2"><div class="field"><label for="rVal">Valor do imóvel (R$)</label><input id="rVal" type="number" value="760000"></div>
+      <div class="field"><label for="rDia">Diária média (R$)</label><input id="rDia" type="number" value="900"></div></div>
+      <div class="row2"><div class="field"><label for="rOcu">Ocupação anual (%)</label><input id="rOcu" type="number" min="0" max="100" value="40"></div>
+      <div class="field"><label for="rTx">Taxa de administração (%)</label><input id="rTx" type="number" min="0" max="100" value="20"></div></div>
+      <div class="field"><label for="rCu">Custos anuais do imóvel (R$)</label><input id="rCu" type="number" value="18000"></div>
+      <div class="res"><div><span>Receita bruta anual</span><span id="rB"></span></div><div><span>Após administração</span><span id="rA"></span></div><div><span>Líquido após custos</span><span id="rL"></span></div><div class="big"><span>Rentabilidade líquida</span><span id="rY"></span></div></div>
+      <p class="note">Simulação ilustrativa com números de exemplo — substitua pelos seus. Não é promessa de rentabilidade.</p>`;
+    const up = () => {
+      const v=+$('#rVal').value||0, d=+$('#rDia').value||0, o=(+$('#rOcu').value||0)/100, t=(+$('#rTx').value||0)/100, c=+$('#rCu').value||0;
+      const bruta = d*365*o, apos = bruta*(1-t), liq = apos-c;
+      $('#rB').textContent = brl(bruta); $('#rA').textContent = brl(apos); $('#rL').textContent = brl(liq);
+      $('#rY').textContent = v>0 ? (liq/v*100).toFixed(1).replace('.',',')+'% a.a.' : '—';
+    };
+    document.querySelectorAll('#calc input').forEach(i=>i.oninput=up); up();
+  }
+}
+
+/* ---------- Conexões ---------- */
+let cxCat = 'Todas';
+function renderCx(){
+  const cats = ['Todas', ...new Set(STATE.CONEXOES.map(c=>c.cat).filter(Boolean))];
+  if(!cats.includes(cxCat)) cxCat = 'Todas';
+  $('#cxTabs').innerHTML = cats.map(c=>`<button class="chip" data-cx="${esc(c)}" aria-pressed="${c===cxCat}">${esc(c)}</button>`).join('');
+  const msgWa = n => wa('whatsappImoveis', `Olá! Vim pelo Conecta Preá e gostaria de contato com: ${n}.`);
+  $('#cx').innerHTML = STATE.CONEXOES.filter(c=>cxCat==='Todas'||c.cat===cxCat).map(c=>{
+    const act = c.tel ? `<a href="tel:${esc(c.tel)}">${ic('phone')} ${esc(c.rotulo || c.tel)}</a>`
+      : c.url ? `<a href="${esc(c.url)}" target="_blank" rel="noopener">${ic('globe')} Visitar site ${ic('arrow')}</a>`
+      : `<a href="${msgWa(c.nome)}" target="_blank" rel="noopener">${ic('wa')} Consultar via WhatsApp</a>`;
+    return `<div class="cxc"><h3>${esc(c.nome)}</h3><p>${esc(c.desc)}</p>${act}</div>`;
+  }).join('');
+}
+
+/* ---------- Blog Interno + Leitor de Artigo ---------- */
+const BLOG_FILTER = { cat:'Todas', q:'' };
+
+function renderPosts(){
+  const cats = ['Todas', ...new Set(STATE.POSTS.map(p=>p.cat).filter(Boolean))];
+  if(!cats.includes(BLOG_FILTER.cat)) BLOG_FILTER.cat = 'Todas';
+
+  $('#blogBar').innerHTML =
+    cats.map(c=>`<button class="chip" type="button" data-blog-cat="${esc(c)}" aria-pressed="${c===BLOG_FILTER.cat}">${esc(c)}</button>`).join('') +
+    `<span class="sp"></span>
+     <input class="blog-search" id="blogSearch" type="search" placeholder="Buscar matérias..." value="${esc(BLOG_FILTER.q)}" aria-label="Buscar matérias no blog">`;
+
+  const q = BLOG_FILTER.q.trim().toLowerCase();
+  const list = STATE.POSTS.filter(p => {
+    const matchCat = BLOG_FILTER.cat === 'Todas' || p.cat === BLOG_FILTER.cat;
+    const matchQ = !q || (p.titulo||'').toLowerCase().includes(q) || (p.resumo||'').toLowerCase().includes(q) || (p.conteudo||'').toLowerCase().includes(q);
+    return matchCat && matchQ;
+  });
+
+  $('#posts').innerHTML = list.length ? list.map(p => `
+    <article class="post" data-open-post="${esc(p.id)}" tabindex="0" role="button" aria-label="Ler matéria: ${esc(p.titulo)}">
+      ${phBox(p.img, 'news')}
+      <div class="b">
+        <span class="k">${esc(p.cat)}${p.exemplo?'<span class="ex">exemplo</span>':''}</span>
+        <h3>${esc(p.titulo)}</h3>
+        <p>${esc(p.resumo)}</p>
+        <div class="meta-row">
+          <span>${esc([p.data, p.tempoLeitura].filter(Boolean).join(' · ') || 'Artigo Conecta')}</span>
+          <span class="read-more">Ler matéria ${ic('arrow')}</span>
+        </div>
+      </div>
+    </article>`).join('') :
+    `<div class="empty">Nenhuma matéria encontrada para este filtro.</div>`;
+}
+
+// Formata texto simples com ## Subtítulo, - Lista e > Citação
+function formatArticleBody(raw){
+  const text = (raw || '').trim();
+  if(!text) return '<p>Conteúdo completo em breve.</p>';
+  const blocks = text.split(/\n{2,}/);
+  return blocks.map(block => {
+    const lines = block.split('\n').map(l => l.trim()).filter(Boolean);
+    if(!lines.length) return '';
+    if(lines.every(l => l.startsWith('- ') || l.startsWith('• '))){
+      return `<ul>${lines.map(l => `<li>${esc(l.replace(/^[-•]\s+/, ''))}</li>`).join('')}</ul>`;
+    }
+    if(lines[0].startsWith('## ')){
+      const h = `<h2>${esc(lines[0].slice(3))}</h2>`;
+      const rest = lines.slice(1).join('<br>');
+      return rest ? `${h}<p>${esc(rest).replace(/&lt;br&gt;/g,'<br>')}</p>` : h;
+    }
+    if(lines[0].startsWith('> ')){
+      return `<blockquote>${esc(lines.map(l => l.replace(/^>\s*/, '')).join(' '))}</blockquote>`;
+    }
+    return `<p>${lines.map(l => esc(l)).join('<br>')}</p>`;
+  }).join('');
+}
+
+let currentArticleId = null;
+function openArticle(id){
+  const p = STATE.POSTS.find(x => x.id === id);
+  if(!p) return;
+  // Se não há conteúdo interno mas existe URL externa válida, abre externo
+  if(!(p.conteudo && p.conteudo.trim()) && /^https?:/.test(p.url || '')){
+    window.open(p.url, '_blank', 'noopener');
+    return;
+  }
+  currentArticleId = p.id;
+  $('#artCat').textContent = p.cat || 'Blog Conecta';
+  const waMsg = `Olá! Li a matéria "${p.titulo}" no blog da Conecta Preá e gostaria de conversar sobre o assunto.`;
+  $('#artScroll').innerHTML = `
+    ${p.img ? `<div class="article-cover"><img src="${esc(p.img)}" alt="${esc(p.titulo)}" onerror="this.parentElement.remove()"></div>` : ''}
+    <div class="article-inner">
+      <h1 id="artTitle">${esc(p.titulo)}</h1>
+      <div class="article-meta">
+        ${p.autor ? `<span>Por <strong>${esc(p.autor)}</strong></span>` : ''}
+        ${p.data ? `<span>${ic('calendar')} ${esc(p.data)}</span>` : ''}
+        ${p.tempoLeitura ? `<span>Leitura: ${esc(p.tempoLeitura)}</span>` : ''}
+      </div>
+      ${p.resumo ? `<p class="article-lead">${esc(p.resumo)}</p>` : ''}
+      <div class="article-body">${formatArticleBody(p.conteudo)}</div>
+      <div class="article-foot">
+        <div>
+          <strong>Ficou com alguma dúvida sobre este tema?</strong><br>
+          <span style="font-size:.86rem;color:var(--muted)">Fale diretamente com nossa equipe no Preá.</span>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          ${/^https?:/.test(p.url||'') ? `<a class="btn btn-ghost btn-sm" href="${esc(p.url)}" target="_blank" rel="noopener">Fonte externa ${ic('arrow')}</a>` : ''}
+          <a class="btn btn-wa btn-sm" href="${wa('whatsappImoveis', waMsg)}" target="_blank" rel="noopener">${ic('wa')} Falar no WhatsApp</a>
+        </div>
+      </div>
+    </div>`;
+  $('#articleModal').classList.add('open');
+  document.body.classList.add('modal-open');
+}
+
+function closeArticle(){
+  $('#articleModal').classList.remove('open');
+  if(!$('#adminOverlay').classList.contains('open')) document.body.classList.remove('modal-open');
+}
+
+function renderAll(){
+  renderStatic();
+  renderChooser();
+  renderProps();
+  renderGestao();
+  renderHub();
+  renderNews();
+  renderMkt();
+  renderCx();
+  renderPosts();
+}
+
+/* ==========================================================================
+   PAINEL ADMINISTRATIVO (CMS COMPLETO)
+   ========================================================================== */
+let adminUnlocked = false;
+let adminTab = 'blog';
+let editingId = null; // ID ou índice do item sendo editado na aba atual
+
+const ADMIN_TABS = [
+  { id:'blog',     label:'Blog (Matérias)',    icon:'edit',      count:() => STATE.POSTS.length },
+  { id:'imoveis',  label:'Imóveis',            icon:'home',      count:() => STATE.IMOVEIS.length },
+  { id:'noticias', label:'Notícias (Radar)',   icon:'news',      count:() => STATE.NOTICIAS.length },
+  { id:'mercado',  label:'Mercado & m²',       icon:'chart',     count:() => STATE.MERCADO.bairros.length },
+  { id:'hub',      label:'Espaços & Soluções', icon:'rocket',    count:() => STATE.HUB.length },
+  { id:'gestao',   label:'Gestão & Concierge', icon:'key',       count:() => STATE.SERVICOS_GESTAO.length },
+  { id:'conexoes', label:'Conexões',           icon:'globe',     count:() => STATE.CONEXOES.length },
+  { id:'geral',    label:'Geral, Hero & Backup', icon:'settings', count:() => null }
+];
+
+function getAdminPin(){
+  try { return localStorage.getItem(PIN_KEY) || '1234'; }
+  catch { return '1234'; }
+}
+
+function requestOpenAdmin(targetTab = null){
+  if(targetTab) adminTab = targetTab;
+  if(adminUnlocked){
+    openAdminPanel();
+  } else {
+    $('#pinInput').value = '';
+    $('#loginModal').classList.add('open');
+    setTimeout(() => $('#pinInput').focus(), 60);
+  }
+}
+
+function openAdminPanel(){
+  editingId = null;
+  $('#adminOverlay').classList.add('open');
+  document.body.classList.add('modal-open');
+  renderAdmin();
+}
+
+function closeAdminPanel(){
+  $('#adminOverlay').classList.remove('open');
+  if(!$('#articleModal').classList.contains('open')) document.body.classList.remove('modal-open');
+}
+
+$('#loginCancel').addEventListener('click', () => $('#loginModal').classList.remove('open'));
+$('#loginForm').addEventListener('submit', e => {
+  e.preventDefault();
+  if($('#pinInput').value.trim() === getAdminPin()){
+    adminUnlocked = true;
+    $('#loginModal').classList.remove('open');
+    openAdminPanel();
+    toast('Painel administrativo desbloqueado!');
+  } else {
+    toast('PIN incorreto. Tente novamente.', 'err');
+    $('#pinInput').select();
+  }
+});
+
+$('#adminCloseTop').addEventListener('click', closeAdminPanel);
+$('#adminCloseSide').addEventListener('click', closeAdminPanel);
+$('#adminLockBtn').addEventListener('click', () => {
+  adminUnlocked = false;
+  closeAdminPanel();
+  toast('Sessão administrativa encerrada.');
+});
+
+// Componente reutilizável de seleção de imagem (URL + Upload + Preview)
+function imgPickerHtml(idPrefix, currentVal = '', label = 'Imagem de capa'){
+  return `
+    <div class="field">
+      <label for="${idPrefix}Url">${esc(label)}</label>
+      <div class="img-picker">
+        <div class="img-preview-row">
+          <div class="img-preview-box" id="${idPrefix}Prev">
+            ${currentVal ? `<img src="${esc(currentVal)}" alt="Prévia">` : ic('image')}
+          </div>
+          <div style="flex:1;min-width:0;display:grid;gap:8px">
+            <input id="${idPrefix}Url" type="text" placeholder="Cole uma URL (https://...) ou envie do computador" value="${esc(currentVal)}">
+            <div class="img-picker-btns">
+              <label class="file-label">${ic('upload')} Enviar imagem
+                <input type="file" accept="image/*" data-img-upload="${idPrefix}">
+              </label>
+              <button type="button" class="btn btn-ghost btn-xs" data-img-clear="${idPrefix}">Remover imagem</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>`;
+}
+
+function renderAdmin(){
+  $('#adminNav').innerHTML = ADMIN_TABS.map(t => {
+    const c = t.count();
+    return `<button type="button" class="${t.id===adminTab?'on':''}" data-admin-tab="${t.id}">
+      ${ic(t.icon)}<span>${esc(t.label)}</span>${c!==null?`<span class="badge-cnt">${c}</span>`:''}
+    </button>`;
+  }).join('');
+
+  const cur = ADMIN_TABS.find(t => t.id === adminTab);
+  $('#adminHeading').textContent = cur ? cur.label : 'Painel Admin';
+
+  if(adminTab === 'blog') renderAdminBlog();
+  else if(adminTab === 'imoveis') renderAdminImoveis();
+  else if(adminTab === 'noticias') renderAdminNoticias();
+  else if(adminTab === 'mercado') renderAdminMercado();
+  else if(adminTab === 'hub') renderAdminHub();
+  else if(adminTab === 'gestao') renderAdminGestao();
+  else if(adminTab === 'conexoes') renderAdminConexoes();
+  else if(adminTab === 'geral') renderAdminGeral();
+}
+
+/* ---------- 1. ADMIN: BLOG ---------- */
+function renderAdminBlog(){
+  const item = editingId ? STATE.POSTS.find(p => p.id === editingId) : null;
+  const today = new Date().toLocaleDateString('pt-BR');
+  $('#adminBody').innerHTML = `
+    <div class="admin-grid">
+      <div class="admin-card">
+        <h3>Matérias publicadas (${STATE.POSTS.length})
+          <button type="button" class="btn btn-primary btn-xs" data-adm-new="blog">${ic('plus')} Nova matéria</button>
+        </h3>
+        <div class="admin-list">
+          ${STATE.POSTS.length ? STATE.POSTS.map((p, idx) => `
+            <div class="admin-item ${editingId===p.id?'active':''}">
+              <div class="admin-thumb">${p.img ? `<img src="${esc(p.img)}" alt="">` : ic('news')}</div>
+              <div class="admin-item-info">
+                <strong>${esc(p.titulo)}</strong>
+                <span>${esc(p.cat)} · ${esc(p.data || 'Sem data')}</span>
+              </div>
+              <div class="admin-item-acts">
+                <button class="mini-btn" title="Subir" data-move="POSTS:${idx}:-1">${ic('up')}</button>
+                <button class="mini-btn" title="Descer" data-move="POSTS:${idx}:1">${ic('down')}</button>
+                <button class="mini-btn" title="Editar" data-adm-edit="${esc(p.id)}">${ic('edit')}</button>
+                <button class="mini-btn del" title="Excluir" data-adm-del="POSTS:${esc(p.id)}">${ic('trash')}</button>
+              </div>
+            </div>`).join('') : '<p class="fine">Nenhuma matéria cadastrada.</p>'}
+        </div>
+      </div>
+
+      <form class="admin-card" id="formBlog">
+        <h3>${item ? 'Editar matéria' : 'Adicionar nova matéria'}</h3>
+        <div class="row2">
+          <div class="field"><label for="blCat">Categoria</label><input id="blCat" required value="${esc(item?.cat || 'Investimento')}" placeholder="Ex.: Guia do comprador"></div>
+          <div class="field"><label for="blData">Data</label><input id="blData" value="${esc(item?.data ?? today)}" placeholder="DD/MM/AAAA"></div>
+        </div>
+        <div class="field"><label for="blTitulo">Título da matéria</label><input id="blTitulo" required value="${esc(item?.titulo || '')}" placeholder="Título chamativo e claro"></div>
+        <div class="row2">
+          <div class="field"><label for="blAutor">Autor</label><input id="blAutor" value="${esc(item?.autor || 'Equipe Conecta Preá')}"></div>
+          <div class="field"><label for="blTempo">Tempo de leitura</label><input id="blTempo" value="${esc(item?.tempoLeitura || '4 min')}" placeholder="Ex.: 4 min"></div>
+        </div>
+        <div class="field"><label for="blResumo">Resumo (aparece no card)</label><textarea id="blResumo" rows="2" required placeholder="Breve resumo de 1 a 2 linhas">${esc(item?.resumo || '')}</textarea></div>
+        ${imgPickerHtml('blImg', item?.img || '', 'Imagem da matéria')}
+        <div class="field">
+          <label for="blConteudo">Conteúdo completo da matéria</label>
+          <textarea id="blConteudo" rows="8" placeholder="Escreva o texto aqui...&#10;&#10;## Use ## para subtítulos&#10;- Use hífen para listas&#10;> Use > para citações em destaque">${esc(item?.conteudo || '')}</textarea>
+          <span class="hint">Dica: separe parágrafos com uma linha em branco. Use <strong>## Subtítulo</strong>, <strong>- Item</strong> ou <strong>&gt; Destaque</strong>.</span>
+        </div>
+        <div class="field"><label for="blUrl">Link externo opcional (se quiser indicar fonte)</label><input id="blUrl" value="${esc(item?.url || '')}" placeholder="https://..."></div>
+        <label class="chk-line"><input type="checkbox" id="blEx" ${item?.exemplo?'checked':''}> Exibir selo "exemplo"</label>
+        <div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap">
+          <button type="submit" class="btn btn-primary btn-sm">${ic('check')} ${item ? 'Salvar alterações' : 'Publicar matéria'}</button>
+          ${item ? `<button type="button" class="btn btn-ghost btn-sm" data-adm-new="blog">Cancelar edição</button>` : ''}
+        </div>
+      </form>
+    </div>`;
+
+  $('#formBlog').addEventListener('submit', e => {
+    e.preventDefault();
+    const payload = {
+      id: item ? item.id : uid('post'),
+      cat: $('#blCat').value.trim(),
+      data: $('#blData').value.trim(),
+      titulo: $('#blTitulo').value.trim(),
+      autor: $('#blAutor').value.trim(),
+      tempoLeitura: $('#blTempo').value.trim(),
+      resumo: $('#blResumo').value.trim(),
+      img: $('#blImgUrl').value.trim(),
+      conteudo: $('#blConteudo').value.trim(),
+      url: $('#blUrl').value.trim(),
+      exemplo: $('#blEx').checked
+    };
+    if(item){
+      const idx = STATE.POSTS.findIndex(x => x.id === item.id);
+      if(idx >= 0) STATE.POSTS[idx] = payload;
+    } else {
+      STATE.POSTS.unshift(payload);
+    }
+    if(saveState()){
+      editingId = null;
+      renderAll();
+      renderAdmin();
+      toast(item ? 'Matéria atualizada!' : 'Nova matéria publicada no blog!');
+    }
+  });
+}
+
+/* ---------- 2. ADMIN: IMÓVEIS ---------- */
+function renderAdminImoveis(){
+  const item = editingId ? STATE.IMOVEIS.find(p => p.id === editingId) : null;
+  $('#adminBody').innerHTML = `
+    <div class="admin-grid">
+      <div class="admin-card">
+        <h3>Imóveis cadastrados (${STATE.IMOVEIS.length})
+          <button type="button" class="btn btn-primary btn-xs" data-adm-new="imoveis">${ic('plus')} Novo imóvel</button>
+        </h3>
+        <div class="admin-list">
+          ${STATE.IMOVEIS.length ? STATE.IMOVEIS.map((p, idx) => `
+            <div class="admin-item ${editingId===p.id?'active':''}">
+              <div class="admin-thumb">${p.img ? `<img src="${esc(p.img)}" alt="">` : ic(p.tipo==='terreno'?'map':'home')}</div>
+              <div class="admin-item-info">
+                <strong>${esc(p.titulo)}</strong>
+                <span>${esc(p.ref)} · ${esc(TIPOS[p.tipo]||p.tipo)} · ${brl(p.preco)}</span>
+              </div>
+              <div class="admin-item-acts">
+                <button class="mini-btn" title="Subir" data-move="IMOVEIS:${idx}:-1">${ic('up')}</button>
+                <button class="mini-btn" title="Descer" data-move="IMOVEIS:${idx}:1">${ic('down')}</button>
+                <button class="mini-btn" title="Editar" data-adm-edit="${esc(p.id)}">${ic('edit')}</button>
+                <button class="mini-btn del" title="Excluir" data-adm-del="IMOVEIS:${esc(p.id)}">${ic('trash')}</button>
+              </div>
+            </div>`).join('') : '<p class="fine">Nenhum imóvel cadastrado.</p>'}
+        </div>
+      </div>
+
+      <form class="admin-card" id="formImovel">
+        <h3>${item ? 'Editar imóvel' : 'Adicionar novo imóvel'}</h3>
+        <div class="row2">
+          <div class="field"><label for="imRef">Referência</label><input id="imRef" required value="${esc(item?.ref || 'VND-' + Math.floor(1100 + Math.random()*8900))}"></div>
+          <div class="field"><label for="imTipo">Tipo</label>
+            <select id="imTipo">
+              ${Object.entries(TIPOS).map(([k,v]) => `<option value="${k}" ${item?.tipo===k?'selected':''}>${v}</option>`).join('')}
+            </select>
+          </div>
+        </div>
+        <div class="field"><label for="imTitulo">Título do anúncio</label><input id="imTitulo" required value="${esc(item?.titulo || '')}" placeholder="Ex.: Casa com 3 suítes no Setor Conduru"></div>
+        <div class="row2">
+          <div class="field"><label for="imBairro">Bairro / Setor</label><input id="imBairro" required value="${esc(item?.bairro || 'Preá')}"></div>
+          <div class="field"><label for="imPreco">Preço (R$)</label><input id="imPreco" type="number" min="0" required value="${esc(item?.preco ?? '')}"></div>
+        </div>
+        <div class="field"><label for="imPrecoLabel">Rótulo do preço (opcional)</label><input id="imPrecoLabel" value="${esc(item?.precoLabel || '')}" placeholder="Padrão: Valor de venda"></div>
+        <div class="row2">
+          <div class="field"><label for="imArea">Área (m²)</label><input id="imArea" type="number" min="0" value="${esc(item?.area || '')}"></div>
+          <div class="field"><label for="imQuartos">Quartos</label><input id="imQuartos" type="number" min="0" value="${esc(item?.quartos || '')}"></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="imSuites">Suítes</label><input id="imSuites" type="number" min="0" value="${esc(item?.suites || '')}"></div>
+          <div class="field"><label for="imVagas">Vagas</label><input id="imVagas" type="number" min="0" value="${esc(item?.vagas || '')}"></div>
+        </div>
+        ${imgPickerHtml('imImg', item?.img || '', 'Foto principal do imóvel')}
+        <div class="field"><label for="imLink">Link externo da ficha (opcional)</label><input id="imLink" value="${esc(item?.link || '')}" placeholder="https://..."></div>
+        <label class="chk-line"><input type="checkbox" id="imDestaque" ${item?.destaque?'checked':''}> Marcar como Destaque</label>
+        <div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap">
+          <button type="submit" class="btn btn-primary btn-sm">${ic('check')} ${item ? 'Salvar imóvel' : 'Adicionar imóvel'}</button>
+          ${item ? `<button type="button" class="btn btn-ghost btn-sm" data-adm-new="imoveis">Cancelar edição</button>` : ''}
+        </div>
+      </form>
+    </div>`;
+
+  $('#formImovel').addEventListener('submit', e => {
+    e.preventDefault();
+    const num = id => { const v = Number($('#'+id).value); return v > 0 ? v : undefined; };
+    const payload = {
+      id: item ? item.id : uid('im'),
+      ref: $('#imRef').value.trim(),
+      tipo: $('#imTipo').value,
+      destaque: $('#imDestaque').checked,
+      titulo: $('#imTitulo').value.trim(),
+      bairro: $('#imBairro').value.trim(),
+      preco: Number($('#imPreco').value) || 0,
+      precoLabel: $('#imPrecoLabel').value.trim() || undefined,
+      area: num('imArea'),
+      quartos: num('imQuartos'),
+      suites: num('imSuites'),
+      vagas: num('imVagas'),
+      img: $('#imImgUrl').value.trim(),
+      link: $('#imLink').value.trim()
+    };
+    if(item){
+      const idx = STATE.IMOVEIS.findIndex(x => x.id === item.id);
+      if(idx >= 0) STATE.IMOVEIS[idx] = payload;
+    } else {
+      STATE.IMOVEIS.unshift(payload);
+    }
+    if(saveState()){
+      editingId = null;
+      renderAll();
+      renderAdmin();
+      toast(item ? 'Imóvel atualizado!' : 'Novo imóvel adicionado!');
+    }
+  });
+}
+
+/* ---------- 3. ADMIN: NOTÍCIAS ---------- */
+function renderAdminNoticias(){
+  const item = editingId ? STATE.NOTICIAS.find(n => n.id === editingId) : null;
+  $('#adminBody').innerHTML = `
+    <div class="admin-grid">
+      <div class="admin-card">
+        <h3>Notícias do Radar (${STATE.NOTICIAS.length})
+          <button type="button" class="btn btn-primary btn-xs" data-adm-new="noticias">${ic('plus')} Nova notícia</button>
+        </h3>
+        <p class="fine" style="margin:0 0 12px">A 1ª notícia da lista aparece como destaque grande no Radar.</p>
+        <div class="admin-list">
+          ${STATE.NOTICIAS.map((n, idx) => `
+            <div class="admin-item ${editingId===n.id?'active':''}">
+              <div class="admin-thumb">${n.img ? `<img src="${esc(n.img)}" alt="">` : ic('news')}</div>
+              <div class="admin-item-info">
+                <strong>${idx===0?'★ ':''}${esc(n.titulo)}</strong>
+                <span>${esc(n.cat)} · ${esc(n.fonte)}</span>
+              </div>
+              <div class="admin-item-acts">
+                <button class="mini-btn" title="Subir" data-move="NOTICIAS:${idx}:-1">${ic('up')}</button>
+                <button class="mini-btn" title="Descer" data-move="NOTICIAS:${idx}:1">${ic('down')}</button>
+                <button class="mini-btn" title="Editar" data-adm-edit="${esc(n.id)}">${ic('edit')}</button>
+                <button class="mini-btn del" title="Excluir" data-adm-del="NOTICIAS:${esc(n.id)}">${ic('trash')}</button>
+              </div>
+            </div>`).join('')}
+        </div>
+      </div>
+
+      <form class="admin-card" id="formNoticia">
+        <h3>${item ? 'Editar notícia' : 'Adicionar notícia'}</h3>
+        <div class="row2">
+          <div class="field"><label for="ntCat">Categoria</label><input id="ntCat" required value="${esc(item?.cat || 'Mercado')}"></div>
+          <div class="field"><label for="ntFonte">Fonte · Data</label><input id="ntFonte" required value="${esc(item?.fonte || '')}" placeholder="Ex.: Exame Invest · Nov 2026"></div>
+        </div>
+        <div class="field"><label for="ntTitulo">Manchete</label><input id="ntTitulo" required value="${esc(item?.titulo || '')}"></div>
+        <div class="field"><label for="ntUrl">Link da matéria (opcional)</label><input id="ntUrl" value="${esc(item?.url || '')}" placeholder="https://..."></div>
+        ${imgPickerHtml('ntImg', item?.img || '', 'Imagem da notícia')}
+        <div style="display:flex;gap:10px;margin-top:14px">
+          <button type="submit" class="btn btn-primary btn-sm">${ic('check')} ${item ? 'Salvar notícia' : 'Adicionar notícia'}</button>
+          ${item ? `<button type="button" class="btn btn-ghost btn-sm" data-adm-new="noticias">Cancelar</button>` : ''}
+        </div>
+      </form>
+    </div>`;
+
+  $('#formNoticia').addEventListener('submit', e => {
+    e.preventDefault();
+    const payload = {
+      id: item ? item.id : uid('n'),
+      cat: $('#ntCat').value.trim(),
+      fonte: $('#ntFonte').value.trim(),
+      titulo: $('#ntTitulo').value.trim(),
+      url: $('#ntUrl').value.trim(),
+      img: $('#ntImgUrl').value.trim()
+    };
+    if(item){
+      const idx = STATE.NOTICIAS.findIndex(x => x.id === item.id);
+      if(idx >= 0) STATE.NOTICIAS[idx] = payload;
+    } else {
+      STATE.NOTICIAS.unshift(payload);
+    }
+    if(saveState()){
+      editingId = null;
+      renderAll();
+      renderAdmin();
+      toast(item ? 'Notícia atualizada!' : 'Notícia adicionada!');
+    }
+  });
+}
+
+/* ---------- 4. ADMIN: MERCADO & m² ---------- */
+function renderAdminMercado(){
+  const M = STATE.MERCADO;
+  $('#adminBody').innerHTML = `
+    <div class="admin-grid">
+      <form class="admin-card" id="formMercado">
+        <h3>Indicadores Gerais de Mercado</h3>
+        <div class="row2">
+          <div class="field"><label for="mkData">Data de atualização</label><input id="mkData" value="${esc(M.atualizado)}"></div>
+          <div class="field"><label for="mkTotal">Total de anúncios</label><input id="mkTotal" type="number" value="${esc(M.totalAnuncios)}"></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="mkTerMed">Mediana terrenos (R$/m²)</label><input id="mkTerMed" type="number" value="${esc(M.terrenos.mediana)}"></div>
+          <div class="field"><label for="mkTerAm">Amostra terrenos</label><input id="mkTerAm" type="number" value="${esc(M.terrenos.amostra)}"></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="mkCasMed">Mediana casas/apts (R$/m²)</label><input id="mkCasMed" type="number" value="${esc(M.casas.mediana)}"></div>
+          <div class="field"><label for="mkCasAm">Amostra casas/apts</label><input id="mkCasAm" type="number" value="${esc(M.casas.amostra)}"></div>
+        </div>
+        <div class="field"><label for="mkNota">Nota metodológica</label><textarea id="mkNota" rows="3">${esc(M.nota)}</textarea></div>
+        <button type="submit" class="btn btn-primary btn-sm">${ic('check')} Salvar indicadores</button>
+      </form>
+
+      <div class="admin-card">
+        <h3>Preço por m² por Bairro (Barras e Calculadora)</h3>
+        <div class="admin-list" style="margin-bottom:16px">
+          ${M.bairros.map((b, idx) => `
+            <div class="admin-item">
+              <div class="admin-item-info">
+                <strong>${esc(b.nome)}</strong>
+                <span>${brl(b.mediana)}/m² · ${esc(b.n)} anúncios</span>
+              </div>
+              <div class="admin-item-acts">
+                <button class="mini-btn" title="Subir" data-move-bairro="${idx}:-1">${ic('up')}</button>
+                <button class="mini-btn" title="Descer" data-move-bairro="${idx}:1">${ic('down')}</button>
+                <button class="mini-btn del" title="Excluir" data-del-bairro="${idx}">${ic('trash')}</button>
+              </div>
+            </div>`).join('')}
+        </div>
+        <form id="formAddBairro" style="border-top:1px solid var(--line);padding-top:14px">
+          <p class="grp-t">Adicionar bairro</p>
+          <div class="row3">
+            <div class="field"><label for="nbNome">Bairro</label><input id="nbNome" required placeholder="Nome"></div>
+            <div class="field"><label for="nbMed">Mediana R$/m²</label><input id="nbMed" type="number" required placeholder="850"></div>
+            <div class="field"><label for="nbQtd">Nº anúncios</label><input id="nbQtd" type="number" required value="5"></div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-xs">${ic('plus')} Adicionar bairro</button>
+        </form>
+      </div>
+    </div>`;
+
+  $('#formMercado').addEventListener('submit', e => {
+    e.preventDefault();
+    STATE.MERCADO.atualizado = $('#mkData').value.trim();
+    STATE.MERCADO.totalAnuncios = Number($('#mkTotal').value) || 0;
+    STATE.MERCADO.terrenos.mediana = Number($('#mkTerMed').value) || 0;
+    STATE.MERCADO.terrenos.amostra = Number($('#mkTerAm').value) || 0;
+    STATE.MERCADO.casas.mediana = Number($('#mkCasMed').value) || 0;
+    STATE.MERCADO.casas.amostra = Number($('#mkCasAm').value) || 0;
+    STATE.MERCADO.nota = $('#mkNota').value.trim();
+    if(saveState()){ renderAll(); renderAdmin(); toast('Indicadores de mercado salvos!'); }
+  });
+
+  $('#formAddBairro').addEventListener('submit', e => {
+    e.preventDefault();
+    STATE.MERCADO.bairros.push({
+      nome: $('#nbNome').value.trim(),
+      mediana: Number($('#nbMed').value) || 0,
+      n: Number($('#nbQtd').value) || 1
+    });
+    if(saveState()){ renderAll(); renderAdmin(); toast('Bairro adicionado!'); }
+  });
+}
+
+/* ---------- 5. ADMIN: HUB (ESPAÇOS & SOLUÇÕES) ---------- */
+function renderAdminHub(){
+  const item = editingId ? STATE.HUB.find(h => h.id === editingId) : null;
+  const detalhesTxt = item ? (item.detalhes || []).map(d => {
+    const body = d.itens ? d.itens.map(x => '- ' + x).join('\n') : (d.texto || '');
+    return `## ${d.h}\n${body}`;
+  }).join('\n\n') : '';
+
+  $('#adminBody').innerHTML = `
+    <div class="admin-grid">
+      <div class="admin-card">
+        <h3>Espaços &amp; Soluções (${STATE.HUB.length})
+          <button type="button" class="btn btn-primary btn-xs" data-adm-new="hub">${ic('plus')} Nova solução</button>
+        </h3>
+        <div class="admin-list">
+          ${STATE.HUB.map((h, idx) => `
+            <div class="admin-item ${editingId===h.id?'active':''}">
+              <div class="admin-thumb">${h.img ? `<img src="${esc(h.img)}" alt="">` : ic(h.icon||'compass')}</div>
+              <div class="admin-item-info">
+                <strong>${esc(h.nome)}</strong>
+                <span>${esc(h.titulo)}</span>
+              </div>
+              <div class="admin-item-acts">
+                <button class="mini-btn" title="Subir" data-move="HUB:${idx}:-1">${ic('up')}</button>
+                <button class="mini-btn" title="Descer" data-move="HUB:${idx}:1">${ic('down')}</button>
+                <button class="mini-btn" title="Editar" data-adm-edit="${esc(h.id)}">${ic('edit')}</button>
+                <button class="mini-btn del" title="Excluir" data-adm-del="HUB:${esc(h.id)}">${ic('trash')}</button>
+              </div>
+            </div>`).join('')}
+        </div>
+      </div>
+
+      <form class="admin-card" id="formHub">
+        <h3>${item ? 'Editar solução' : 'Adicionar solução'}</h3>
+        <div class="row2">
+          <div class="field"><label for="hbNome">Nome curto</label><input id="hbNome" required value="${esc(item?.nome || '')}" placeholder="Ex.: Marca Residente"></div>
+          <div class="field"><label for="hbIcon">Ícone</label>
+            <select id="hbIcon">${ICON_OPTIONS.map(k => `<option value="${k}" ${item?.icon===k?'selected':''}>${k}</option>`).join('')}</select>
+          </div>
+        </div>
+        <div class="field"><label for="hbTitulo">Título do card</label><input id="hbTitulo" required value="${esc(item?.titulo || '')}"></div>
+        <div class="field"><label for="hbTexto">Descrição</label><textarea id="hbTexto" rows="2" required>${esc(item?.texto || '')}</textarea></div>
+        <div class="field"><label for="hbBullets">Destaques do seletor (1 por linha)</label><textarea id="hbBullets" rows="3">${esc((item?.bullets||[]).join('\n'))}</textarea></div>
+        <div class="row2">
+          <div class="field"><label for="hbCta">Texto do botão</label><input id="hbCta" required value="${esc(item?.cta || 'Saiba mais')}"></div>
+          <div class="field"><label for="hbMsg">Mensagem do WhatsApp</label><input id="hbMsg" value="${esc(item?.msg || '')}"></div>
+        </div>
+        ${imgPickerHtml('hbImg', item?.img || '', 'Imagem da solução')}
+        <div class="field">
+          <label for="hbDet">Detalhes ("Como funciona")</label>
+          <textarea id="hbDet" rows="5" placeholder="## Título do tópico&#10;- Item 1&#10;- Item 2&#10;&#10;## Outro tópico&#10;Texto explicativo...">${esc(detalhesTxt)}</textarea>
+          <span class="hint">Use <strong>## Título</strong> seguido de linhas com <strong>- item</strong> ou texto livre.</span>
+        </div>
+        <div style="display:flex;gap:10px;margin-top:14px">
+          <button type="submit" class="btn btn-primary btn-sm">${ic('check')} ${item ? 'Salvar solução' : 'Adicionar solução'}</button>
+          ${item ? `<button type="button" class="btn btn-ghost btn-sm" data-adm-new="hub">Cancelar</button>` : ''}
+        </div>
+      </form>
+    </div>`;
+
+  $('#formHub').addEventListener('submit', e => {
+    e.preventDefault();
+    const rawDet = $('#hbDet').value.trim();
+    const detalhes = rawDet ? rawDet.split(/\n{2,}/).map(blk => {
+      const lines = blk.split('\n').map(l => l.trim()).filter(Boolean);
+      const h = lines[0]?.startsWith('## ') ? lines.shift().slice(3) : 'Detalhes';
+      if(lines.every(l => l.startsWith('- '))){
+        return { h, itens: lines.map(l => l.slice(2)) };
+      }
+      return { h, texto: lines.join(' ') };
+    }) : [];
+
+    const payload = {
+      id: item ? item.id : uid('hub'),
+      icon: $('#hbIcon').value,
+      nome: $('#hbNome').value.trim(),
+      titulo: $('#hbTitulo').value.trim(),
+      texto: $('#hbTexto').value.trim(),
+      bullets: $('#hbBullets').value.split('\n').map(s=>s.trim()).filter(Boolean),
+      img: $('#hbImgUrl').value.trim(),
+      cta: $('#hbCta').value.trim(),
+      msg: $('#hbMsg').value.trim(),
+      detalhes
+    };
+    if(item){
+      const idx = STATE.HUB.findIndex(x => x.id === item.id);
+      if(idx >= 0) STATE.HUB[idx] = payload;
+    } else {
+      STATE.HUB.push(payload);
+    }
+    if(saveState()){
+      editingId = null;
+      renderAll();
+      renderAdmin();
+      toast(item ? 'Solução atualizada!' : 'Solução adicionada!');
+    }
+  });
+}
+
+/* ---------- 6. ADMIN: GESTÃO & CONCIERGE ---------- */
+function renderAdminGestao(){
+  const idxEdit = typeof editingId === 'number' ? editingId : null;
+  const svcItem = idxEdit !== null ? STATE.SERVICOS_GESTAO[idxEdit] : null;
+  $('#adminBody').innerHTML = `
+    <div class="admin-grid">
+      <div class="admin-card">
+        <h3>Modelos de contratação</h3>
+        <form id="formModelos" style="margin-bottom:20px">
+          <div class="field">
+            <label for="gsModelos">Modelos (1 por linha)</label>
+            <textarea id="gsModelos" rows="4">${esc(STATE.MODELOS.join('\n'))}</textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-xs">${ic('check')} Salvar modelos</button>
+        </form>
+
+        <h3 style="border-top:1px solid var(--line);padding-top:16px">Serviços incluídos (${STATE.SERVICOS_GESTAO.length})
+          <button type="button" class="btn btn-primary btn-xs" data-adm-new="gestao">${ic('plus')} Novo</button>
+        </h3>
+        <div class="admin-list">
+          ${STATE.SERVICOS_GESTAO.map((s, idx) => `
+            <div class="admin-item ${idxEdit===idx?'active':''}">
+              <div class="admin-thumb">${ic(s.icon||'key')}</div>
+              <div class="admin-item-info">
+                <strong>${esc(s.t)}</strong>
+                <span>${esc(s.p)}</span>
+              </div>
+              <div class="admin-item-acts">
+                <button class="mini-btn" title="Editar" data-adm-edit-idx="${idx}">${ic('edit')}</button>
+                <button class="mini-btn del" title="Excluir" data-del-svc="${idx}">${ic('trash')}</button>
+              </div>
+            </div>`).join('')}
+        </div>
+      </div>
+
+      <form class="admin-card" id="formSvc">
+        <h3>${svcItem ? 'Editar serviço de gestão' : 'Adicionar serviço de gestão'}</h3>
+        <div class="row2">
+          <div class="field"><label for="svTit">Título</label><input id="svTit" required value="${esc(svcItem?.t || '')}"></div>
+          <div class="field"><label for="svIcon">Ícone</label>
+            <select id="svIcon">${ICON_OPTIONS.map(k => `<option value="${k}" ${svcItem?.icon===k?'selected':''}>${k}</option>`).join('')}</select>
+          </div>
+        </div>
+        <div class="field"><label for="svDesc">Descrição</label><textarea id="svDesc" rows="4" required>${esc(svcItem?.p || '')}</textarea></div>
+        <div style="display:flex;gap:10px">
+          <button type="submit" class="btn btn-primary btn-sm">${ic('check')} ${svcItem ? 'Salvar serviço' : 'Adicionar serviço'}</button>
+          ${svcItem ? `<button type="button" class="btn btn-ghost btn-sm" data-adm-new="gestao">Cancelar</button>` : ''}
+        </div>
+      </form>
+    </div>`;
+
+  $('#formModelos').addEventListener('submit', e => {
+    e.preventDefault();
+    STATE.MODELOS = $('#gsModelos').value.split('\n').map(s=>s.trim()).filter(Boolean);
+    if(saveState()){ renderAll(); toast('Modelos de gestão atualizados!'); }
+  });
+
+  $('#formSvc').addEventListener('submit', e => {
+    e.preventDefault();
+    const payload = { icon:$('#svIcon').value, t:$('#svTit').value.trim(), p:$('#svDesc').value.trim() };
+    if(idxEdit !== null) STATE.SERVICOS_GESTAO[idxEdit] = payload;
+    else STATE.SERVICOS_GESTAO.push(payload);
+    if(saveState()){
+      editingId = null;
+      renderAll();
+      renderAdmin();
+      toast(svcItem ? 'Serviço atualizado!' : 'Serviço adicionado!');
+    }
+  });
+}
+
+/* ---------- 7. ADMIN: CONEXÕES ---------- */
+function renderAdminConexoes(){
+  const item = editingId ? STATE.CONEXOES.find(c => c.id === editingId) : null;
+  const tipoContato = item ? (item.tel ? 'tel' : item.url ? 'url' : 'wa') : 'tel';
+  $('#adminBody').innerHTML = `
+    <div class="admin-grid">
+      <div class="admin-card">
+        <h3>Conexões estratégicas (${STATE.CONEXOES.length})
+          <button type="button" class="btn btn-primary btn-xs" data-adm-new="conexoes">${ic('plus')} Nova conexão</button>
+        </h3>
+        <div class="admin-list">
+          ${STATE.CONEXOES.map((c, idx) => `
+            <div class="admin-item ${editingId===c.id?'active':''}">
+              <div class="admin-item-info">
+                <strong>${esc(c.nome)}</strong>
+                <span>${esc(c.cat)} · ${esc(c.rotulo || c.url || 'WhatsApp Conecta')}</span>
+              </div>
+              <div class="admin-item-acts">
+                <button class="mini-btn" title="Subir" data-move="CONEXOES:${idx}:-1">${ic('up')}</button>
+                <button class="mini-btn" title="Descer" data-move="CONEXOES:${idx}:1">${ic('down')}</button>
+                <button class="mini-btn" title="Editar" data-adm-edit="${esc(c.id)}">${ic('edit')}</button>
+                <button class="mini-btn del" title="Excluir" data-adm-del="CONEXOES:${esc(c.id)}">${ic('trash')}</button>
+              </div>
+            </div>`).join('')}
+        </div>
+      </div>
+
+      <form class="admin-card" id="formCx">
+        <h3>${item ? 'Editar conexão' : 'Adicionar conexão'}</h3>
+        <div class="row2">
+          <div class="field"><label for="cxCat">Categoria</label><input id="cxCat" required value="${esc(item?.cat || 'Técnico')}" placeholder="Utilidades, Governo, Jurídico, Técnico..."></div>
+          <div class="field"><label for="cxNome">Nome do órgão / parceiro</label><input id="cxNome" required value="${esc(item?.nome || '')}"></div>
+        </div>
+        <div class="field"><label for="cxDesc">Descrição</label><textarea id="cxDesc" rows="2" required>${esc(item?.desc || '')}</textarea></div>
+        <div class="field">
+          <label for="cxModo">Canal de contato</label>
+          <select id="cxModo">
+            <option value="tel" ${tipoContato==='tel'?'selected':''}>Telefone</option>
+            <option value="url" ${tipoContato==='url'?'selected':''}>Site externo</option>
+            <option value="wa" ${tipoContato==='wa'?'selected':''}>Consultar via WhatsApp da Conecta</option>
+          </select>
+        </div>
+        <div class="row2" id="cxTelRow" style="${tipoContato==='tel'?'':'display:none'}">
+          <div class="field"><label for="cxTel">Telefone (somente números)</label><input id="cxTel" value="${esc(item?.tel || '')}" placeholder="8836331100"></div>
+          <div class="field"><label for="cxRot">Texto exibido</label><input id="cxRot" value="${esc(item?.rotulo || '')}" placeholder="(88) 3633-1100"></div>
+        </div>
+        <div class="field" id="cxUrlRow" style="${tipoContato==='url'?'':'display:none'}">
+          <label for="cxUrl">URL do site</label><input id="cxUrl" value="${esc(item?.url || '')}" placeholder="https://...">
+        </div>
+        <div style="display:flex;gap:10px;margin-top:14px">
+          <button type="submit" class="btn btn-primary btn-sm">${ic('check')} ${item ? 'Salvar conexão' : 'Adicionar conexão'}</button>
+          ${item ? `<button type="button" class="btn btn-ghost btn-sm" data-adm-new="conexoes">Cancelar</button>` : ''}
+        </div>
+      </form>
+    </div>`;
+
+  $('#cxModo').addEventListener('change', e => {
+    $('#cxTelRow').style.display = e.target.value === 'tel' ? '' : 'none';
+    $('#cxUrlRow').style.display = e.target.value === 'url' ? '' : 'none';
+  });
+
+  $('#formCx').addEventListener('submit', e => {
+    e.preventDefault();
+    const modo = $('#cxModo').value;
+    const payload = {
+      id: item ? item.id : uid('cx'),
+      cat: $('#cxCat').value.trim(),
+      nome: $('#cxNome').value.trim(),
+      desc: $('#cxDesc').value.trim(),
+      ...(modo==='tel' ? { tel:$('#cxTel').value.trim(), rotulo:$('#cxRot').value.trim() || $('#cxTel').value.trim() } : {}),
+      ...(modo==='url' ? { url:$('#cxUrl').value.trim() } : {}),
+      ...(modo==='wa' ? { wa:true } : {})
+    };
+    if(item){
+      const idx = STATE.CONEXOES.findIndex(x => x.id === item.id);
+      if(idx >= 0) STATE.CONEXOES[idx] = payload;
+    } else {
+      STATE.CONEXOES.push(payload);
+    }
+    if(saveState()){
+      editingId = null;
+      renderAll();
+      renderAdmin();
+      toast(item ? 'Conexão atualizada!' : 'Conexão adicionada!');
+    }
+  });
+}
+
+/* ---------- 8. ADMIN: GERAL, HERO, TICKER & BACKUP ---------- */
+function renderAdminGeral(){
+  const S = STATE.SITE;
+  $('#adminBody').innerHTML = `
+    <div class="admin-grid">
+      <form class="admin-card" id="formGeral">
+        <h3>Identidade, Hero e Contatos</h3>
+        <div class="row2">
+          <div class="field"><label for="sgNome">Nome do site</label><input id="sgNome" required value="${esc(S.nome)}"></div>
+          <div class="field"><label for="sgTel">Telefone exibido</label><input id="sgTel" value="${esc(S.telefoneExibido)}"></div>
+        </div>
+        ${imgPickerHtml('sgLogo', S.logo || '', 'Logo do cabeçalho (opcional)')}
+        <label class="chk-line" style="margin-bottom:10px"><input type="checkbox" id="sgLogoInv" ${S.logoInverter?'checked':''}> Inverter cores do logo (deixar branco no topo escuro)</label>
+        ${imgPickerHtml('sgHeroImg', S.heroImg || '', 'Foto de fundo do Hero')}
+        <div class="field"><label for="sgEyebrow">Subtítulo superior (Hero)</label><input id="sgEyebrow" value="${esc(S.heroEyebrow)}"></div>
+        <div class="field"><label for="sgHeroTit">Título principal (use *palavra* para itálico laranja)</label><input id="sgHeroTit" value="${esc(S.heroTitulo)}"></div>
+        <div class="field"><label for="sgHeroSub">Descrição do Hero</label><textarea id="sgHeroSub" rows="2">${esc(S.heroSub)}</textarea></div>
+
+        <div class="row3">
+          <div class="field"><label for="sgWaG">WhatsApp Geral</label><input id="sgWaG" value="${esc(S.whatsappGeral)}"></div>
+          <div class="field"><label for="sgWaI">WhatsApp Imóveis</label><input id="sgWaI" value="${esc(S.whatsappImoveis)}"></div>
+          <div class="field"><label for="sgWaM">WhatsApp Gestão</label><input id="sgWaM" value="${esc(S.whatsappGestao)}"></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="sgInsta">URL Instagram</label><input id="sgInsta" value="${esc(S.instagram)}"></div>
+          <div class="field"><label for="sgInstaU">@ Instagram</label><input id="sgInstaU" value="${esc(S.instagramUser)}"></div>
+        </div>
+        <div class="field"><label for="sgEnd">Endereço</label><input id="sgEnd" value="${esc(S.endereco)}"></div>
+        <div class="field"><label for="sgCat">Link do catálogo completo externo</label><input id="sgCat" value="${esc(S.catalogoCompleto)}"></div>
+        <div class="field"><label for="sgTicker">Faixa de destaques (Ticker — 1 frase por linha)</label><textarea id="sgTicker" rows="4">${esc((S.ticker||[]).join('\n'))}</textarea></div>
+        <div class="field">
+          <label for="sgDestaques">4 Números da faixa abaixo do Hero (Formato: Valor | Descrição)</label>
+          <textarea id="sgDestaques" rows="4">${esc((S.destaques||[]).map(d=>`${d.v} | ${d.l}`).join('\n'))}</textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-sm">${ic('check')} Salvar configurações gerais</button>
+      </form>
+
+      <div style="display:grid;gap:18px">
+        <form class="admin-card" id="formPin">
+          <h3>Segurança do Painel</h3>
+          <div class="field">
+            <label for="newPin">Alterar PIN de acesso</label>
+            <input id="newPin" type="password" inputmode="numeric" minlength="4" placeholder="Novo PIN (mín. 4 caracteres)" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-xs">${ic('lock')} Atualizar PIN</button>
+        </form>
+
+        <div class="admin-card">
+          <h3>Backup e Portabilidade</h3>
+          <p class="fine" style="margin:0 0 14px">Todas as alterações ficam salvas neste navegador. Exporte o backup em JSON para transferir para outro computador ou guardar uma cópia de segurança.</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <button type="button" class="btn btn-primary btn-sm" id="btnExportJson">${ic('download')} Exportar Backup (.json)</button>
+            <label class="btn btn-ghost btn-sm" style="cursor:pointer">${ic('upload')} Importar Backup (.json)
+              <input type="file" accept="application/json" id="inputImportJson" style="display:none">
+            </label>
+          </div>
+          <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
+          <p class="fine" style="margin:0 0 10px">Deseja descartar todas as edições e voltar ao conteúdo original de fábrica?</p>
+          <button type="button" class="btn btn-danger btn-xs" id="btnResetAll">${ic('trash')} Restaurar conteúdo original</button>
+        </div>
+      </div>
+    </div>`;
+
+  $('#formGeral').addEventListener('submit', e => {
+    e.preventDefault();
+    const S = STATE.SITE;
+    S.nome = $('#sgNome').value.trim() || 'Conecta Preá';
+    S.telefoneExibido = $('#sgTel').value.trim();
+    S.logo = $('#sgLogoUrl').value.trim();
+    S.logoInverter = $('#sgLogoInv').checked;
+    S.heroImg = $('#sgHeroImgUrl').value.trim();
+    S.heroEyebrow = $('#sgEyebrow').value.trim();
+    S.heroTitulo = $('#sgHeroTit').value.trim();
+    S.heroSub = $('#sgHeroSub').value.trim();
+    S.whatsappGeral = $('#sgWaG').value.replace(/\D/g,'');
+    S.whatsappImoveis = $('#sgWaI').value.replace(/\D/g,'');
+    S.whatsappGestao = $('#sgWaM').value.replace(/\D/g,'');
+    S.instagram = $('#sgInsta').value.trim();
+    S.instagramUser = $('#sgInstaU').value.trim();
+    S.endereco = $('#sgEnd').value.trim();
+    S.catalogoCompleto = $('#sgCat').value.trim();
+    S.ticker = $('#sgTicker').value.split('\n').map(x=>x.trim()).filter(Boolean);
+    const destLines = $('#sgDestaques').value.split('\n').map(x=>x.trim()).filter(Boolean);
+    if(destLines.length){
+      S.destaques = destLines.map(line => {
+        const [v, ...rest] = line.split('|');
+        return { v:(v||'').trim(), l:rest.join('|').trim() };
+      });
+    }
+    if(saveState()){ renderAll(); renderAdmin(); toast('Configurações gerais salvas!'); }
+  });
+
+  $('#formPin').addEventListener('submit', e => {
+    e.preventDefault();
+    const np = $('#newPin').value.trim();
+    if(np.length < 4){ toast('Use ao menos 4 caracteres para o PIN.', 'err'); return; }
+    try { localStorage.setItem(PIN_KEY, np); $('#newPin').value = ''; toast('PIN administrativo atualizado!'); }
+    catch { toast('Não foi possível salvar o PIN.', 'err'); }
+  });
+
+  $('#btnExportJson').addEventListener('click', exportBackupJson);
+  $('#inputImportJson').addEventListener('change', e => {
+    const file = e.target.files?.[0];
+    if(!file) return;
+    const reader = new FileReader();
+    reader.onload = ev => {
+      try {
+        const parsed = JSON.parse(ev.target.result);
+        if(!parsed.SITE || !Array.isArray(parsed.POSTS)) throw new Error('Formato inválido');
+        STATE = { ...clone(DEFAULT_DATA), ...parsed };
+        if(saveState()){ renderAll(); renderAdmin(); toast('Backup importado com sucesso!'); }
+      } catch(err){
+        toast('Arquivo JSON inválido ou incompatível.', 'err');
+      }
+    };
+    reader.readAsText(file);
+  });
+
+  $('#btnResetAll').addEventListener('click', () => {
+    askConfirm('Restaurar dados originais?', 'Todas as alterações feitas no Painel Admin serão substituídas pelo conteúdo padrão inicial.', () => {
+      STATE = clone(DEFAULT_DATA);
+      try { localStorage.removeItem(STORAGE_KEY); } catch {}
+      editingId = null;
+      renderAll();
+      renderAdmin();
+      toast('Conteúdo restaurado para o padrão original.');
+    });
+  });
+}
+
+function exportBackupJson(){
+  try {
+    const blob = new Blob([JSON.stringify(STATE, null, 2)], { type:'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `conecta-prea-backup-${new Date().toISOString().slice(0,10)}.json`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+    toast('Backup JSON exportado!');
+  } catch {
+    toast('Erro ao exportar backup.', 'err');
+  }
+}
+
+$('#adminExportBtn').addEventListener('click', exportBackupJson);
+
+/* ==========================================================================
+   NAVEGAÇÃO E EVENTOS GLOBAIS
+   ========================================================================== */
+function go(sel){
+  const el = document.querySelector(sel); if(!el) return;
+  el.scrollIntoView({behavior:'smooth', block:'start'});
+  if(el.classList.contains('hcard')){
+    el.classList.remove('flash'); void el.offsetWidth; el.classList.add('flash');
+    const d = el.querySelector('details'); if(d) d.open = true;
+  }
+}
+
+$('#mgmtForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const v = id => $('#'+id).value.trim();
+  const txt = `Olá! Quero conhecer os serviços de administração e concierge.\n` +
+    (v('mfNome') ? `Nome: ${v('mfNome')}\n` : '') +
+    `Tipo de imóvel: ${v('mfTipo')}\n` +
+    (v('mfBairro') ? `Localização: ${v('mfBairro')}\n` : '') +
+    `Objetivo: ${v('mfObj')}` +
+    (v('mfObs') ? `\nObservações: ${v('mfObs')}` : '');
+  window.open(wa('whatsappGestao', txt), '_blank', 'noopener');
+});
+
+$('#artClose').addEventListener('click', closeArticle);
+$('#articleModal').addEventListener('click', e => { if(e.target === $('#articleModal')) closeArticle(); });
+$('#artShareBtn').addEventListener('click', () => {
+  const url = `${window.location.href.split('#')[0]}#artigo=${encodeURIComponent(currentArticleId || '')}`;
+  copyText(url);
+});
+
+$('#openAdminTop').addEventListener('click', () => requestOpenAdmin());
+$('#btnManageBlog').addEventListener('click', () => requestOpenAdmin('blog'));
+
+document.addEventListener('click', e => {
+  if(e.target.closest('#openAdminFoot')){ requestOpenAdmin(); return; }
+
+  // Abrir artigo do blog
+  const postCard = e.target.closest('[data-open-post]');
+  if(postCard){ openArticle(postCard.dataset.openPost); return; }
+
+  const t = e.target.closest('button, a');
+  if(!t) return;
+
+  if(t.dataset.intent){ intentAtual = t.dataset.intent; renderChooser(); }
+  else if(t.dataset.filtro){ aplicarFiltro(t.dataset.filtro); }
+  else if(t.dataset.go){ go(t.dataset.go); }
+  else if(t.dataset.tipo){ F.tipo = t.dataset.tipo; renderProps(); }
+  else if(t.dataset.cx){ cxCat = t.dataset.cx; renderCx(); }
+  else if(t.dataset.calc){ renderCalc(t.dataset.calc); }
+  else if(t.dataset.blogCat){ BLOG_FILTER.cat = t.dataset.blogCat; renderPosts(); }
+  // Eventos do Painel Admin
+  else if(t.dataset.adminTab){ adminTab = t.dataset.adminTab; editingId = null; renderAdmin(); }
+  else if(t.dataset.admNew){ editingId = null; renderAdmin(); }
+  else if(t.dataset.admEdit){ editingId = t.dataset.admEdit; renderAdmin(); }
+  else if(t.dataset.admEditIdx !== undefined){ editingId = Number(t.dataset.admEditIdx); renderAdmin(); }
+  else if(t.dataset.admDel){
+    const [arrKey, id] = t.dataset.admDel.split(':');
+    askConfirm('Excluir item?', 'Esta ação removerá o item do site imediatamente.', () => {
+      STATE[arrKey] = STATE[arrKey].filter(x => x.id !== id);
+      if(editingId === id) editingId = null;
+      if(saveState()){ renderAll(); renderAdmin(); toast('Item removido.'); }
+    });
+  }
+  else if(t.dataset.move){
+    const [arrKey, idxStr, dirStr] = t.dataset.move.split(':');
+    const idx = Number(idxStr), to = idx + Number(dirStr);
+    const arr = STATE[arrKey];
+    if(to >= 0 && to < arr.length){
+      [arr[idx], arr[to]] = [arr[to], arr[idx]];
+      if(saveState()){ renderAll(); renderAdmin(); }
+    }
+  }
+  else if(t.dataset.moveBairro){
+    const [idxStr, dirStr] = t.dataset.moveBairro.split(':');
+    const idx = Number(idxStr), to = idx + Number(dirStr);
+    const arr = STATE.MERCADO.bairros;
+    if(to >= 0 && to < arr.length){
+      [arr[idx], arr[to]] = [arr[to], arr[idx]];
+      if(saveState()){ renderAll(); renderAdmin(); }
+    }
+  }
+  else if(t.dataset.delBairro !== undefined){
+    const idx = Number(t.dataset.delBairro);
+    askConfirm('Excluir bairro?', 'O bairro será removido do gráfico e da calculadora.', () => {
+      STATE.MERCADO.bairros.splice(idx, 1);
+      if(saveState()){ renderAll(); renderAdmin(); toast('Bairro removido.'); }
+    });
+  }
+  else if(t.dataset.delSvc !== undefined){
+    const idx = Number(t.dataset.delSvc);
+    askConfirm('Excluir serviço?', 'O card de serviço será removido da seção de Gestão.', () => {
+      STATE.SERVICOS_GESTAO.splice(idx, 1);
+      if(editingId === idx) editingId = null;
+      if(saveState()){ renderAll(); renderAdmin(); toast('Serviço removido.'); }
+    });
+  }
+  else if(t.dataset.imgClear){
+    const p = t.dataset.imgClear;
+    const inp = $('#' + p + 'Url');
+    const prev = $('#' + p + 'Prev');
+    if(inp) inp.value = '';
+    if(prev) prev.innerHTML = ic('image');
+  }
+});
+
+// Suporte a teclado para cards do blog e ESC para fechar modais
+document.addEventListener('keydown', e => {
+  if(e.key === 'Escape'){
+    if($('#confirmModal').classList.contains('open')) $('#confirmModal').classList.remove('open');
+    else if($('#loginModal').classList.contains('open')) $('#loginModal').classList.remove('open');
+    else if($('#articleModal').classList.contains('open')) closeArticle();
+    else if($('#adminOverlay').classList.contains('open')) closeAdminPanel();
+  }
+  if((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === 'a'){
+    e.preventDefault();
+    requestOpenAdmin();
+  }
+  if((e.key === 'Enter' || e.key === ' ') && document.activeElement?.dataset?.openPost){
+    e.preventDefault();
+    openArticle(document.activeElement.dataset.openPost);
+  }
+});
+
+// Inputs de busca, filtros e upload/prévia de imagens
+document.addEventListener('input', e => {
+  if(e.target.id === 'blogSearch'){
+    BLOG_FILTER.q = e.target.value;
+    const pos = e.target.selectionStart;
+    renderPosts();
+    const inp = $('#blogSearch');
+    if(inp){ inp.focus(); inp.setSelectionRange(pos, pos); }
+  }
+  // Atualiza miniatura ao digitar URL de imagem no Admin
+  if(e.target.id && e.target.id.endsWith('Url')){
+    const prefix = e.target.id.slice(0, -3);
+    const prev = $('#' + prefix + 'Prev');
+    if(prev){
+      const val = e.target.value.trim();
+      prev.innerHTML = val ? `<img src="${esc(val)}" alt="Prévia" onerror="this.remove()">` : ic('image');
+    }
+  }
+});
+
+document.addEventListener('change', async e => {
+  if(e.target.id === 'fBairro'){ F.bairro = e.target.value; renderProps(); }
+  if(e.target.id === 'fOrd'){ F.ord = e.target.value; renderProps(); }
+
+  // Upload de imagem do computador dentro do Admin
+  if(e.target.dataset.imgUpload){
+    const prefix = e.target.dataset.imgUpload;
+    const file = e.target.files?.[0];
+    if(!file) return;
+    try {
+      const dataUrl = await compressImageFile(file);
+      const inp = $('#' + prefix + 'Url');
+      const prev = $('#' + prefix + 'Prev');
+      if(inp) inp.value = dataUrl;
+      if(prev) prev.innerHTML = `<img src="${dataUrl}" alt="Prévia">`;
+      toast('Imagem carregada e otimizada!');
+    } catch(err){
+      toast(err.message || 'Erro ao carregar imagem.', 'err');
+    }
+  }
+});
+
+// Inicialização + suporte a link direto de matéria (#artigo=id)
+renderAll();
+if(window.location.hash.startsWith('#artigo=')){
+  const artId = decodeURIComponent(window.location.hash.slice(8));
+  if(STATE.POSTS.some(p => p.id === artId)) openArticle(artId);
+}
+</script>
+</body>
+</html>
